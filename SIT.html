@@ -56,17 +56,6 @@
                 window.location.href = "Category.html";
           }, 10);
           }
-
-          function fantastic() {
-            setTimeout(function(){document.getElementById("fantastic").play();},50)
-          }
-          function fantasticPause() {         
-              var myAudio19 = document.getElementById("fantastic");
-              if(myAudio19.play) {
-                  myAudio19.pause();
-                  myAudio19.currentTime = 0;
-              }
-            }
             function Later() {
             setTimeout(function(){document.getElementById("Later").play();},50)
           }    
@@ -145,14 +134,11 @@
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="buttonLetsGo" onclick="playagain(); fantasticPause(); myVar = setTimeout(category, 2100);">Play again</button>    
+            <button class="buttonLetsGo" onclick="fantasticPause(); playagain(); myVar = setTimeout(category, 2100);">Play again</button>    
           </div>
   </div>
    </body>
    <script src="SIT.js"></script>
-
    <audio id="AUDIO_SIT" src="ArrangeTheLetters/audio/SIT.mp3" type="audio/mp3"></audio>
-
    <audio id="Later" src="GAMESSTORY/TM/LATER.mp3" type="audio/mp3"></audio>
    <audio id="playagain" src="GAMESSTORY/TM/playagain.mp3"></audio>
-   <audio id="fantastic" src="GAMESSTORY/TM/fantastic.mp3"></audio>

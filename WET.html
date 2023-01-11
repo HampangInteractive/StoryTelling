@@ -35,9 +35,7 @@
        }
    </style>
    <script>
-          function fantastic() {
-            setTimeout(function(){document.getElementById("fantastic").play();},500)
-          }
+
         function Later() {
             setTimeout(function(){document.getElementById("Later").play();},50)
           }    
@@ -129,12 +127,12 @@
            <br/>
             <h4 style="color: #ffffff;font-size: 2.4rem; font-weight: 300;">Way to go! You identified all the correct answers</h4>
   
-            <button class="buttonLater" onclick="Later(); myVar = setTimeout(NewGame, 1500);">Later</button>
+            <button class="buttonLater" onclick="fantasticPause(); Later(); myVar = setTimeout(NewGame, 1500);">Later</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="buttonLetsGo" onclick="playagain(); myVar = setTimeout(category, 2300);">Play again</button>    
+            <button class="buttonLetsGo" onclick="fantasticPause(); playagain(); myVar = setTimeout(category, 2300);">Play again</button>    
           </div>
   </div>
    </body>

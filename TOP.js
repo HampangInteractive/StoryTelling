@@ -39,12 +39,18 @@ function SCORE(){
     document.getElementById("TOP").style.visibility = "hidden";
     document.getElementById("SCORE").style.visibility = "visible";
 }; 
+var fantastic = new Audio('GAMESSTORY/TM/fantastic.mp3');
+function fantasticPause() {         
+  if(fantastic.play) {
+    fantastic.pause();
+    fantastic.currentTime = 0;
+  }
+}
 function drop(event) {
   var t = new Audio('ArrangeTheLetters/letters_audio/T.mp3');
   var o = new Audio('ArrangeTheLetters/letters_audio/O.mp3');
   var p = new Audio('ArrangeTheLetters/letters_audio/P.mp3');
   var top = new Audio('ArrangeTheLetters/audio/top.mp3');
-  var fantastic = new Audio('GAMESSTORY/TM/fantastic.mp3');
   
   event.preventDefault();
   event.target.classList.remove("droppable-hover");
