@@ -1,0 +1,104 @@
+<link rel="stylesheet" type="text/css" href="DeerAndSnail.css"> 
+<script src="modal.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<head>
+    <style>
+      .box{
+      width: 100rem;
+      height: 56rem;          
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      }
+   
+      #ArrangeCategory {
+           background-image: url("CLEANPAGE/STORIES.gif");
+           background-repeat: no-repeat;
+           background-size: contain;
+           font-family: 'Fredoka One';
+           font-size: 22px;
+           zoom: 90%;
+    }
+    #menuicon{ 
+      position: fixed;    
+      top: 18rem;
+      RIGHT: 6rem;
+    } 
+
+   </style>
+   <script>
+       function adjective() {
+              setTimeout(function(){ 
+                window.location.href = "MAD.html";
+          }, 10);
+          }
+          function objects() {
+              setTimeout(function(){ 
+                window.location.href = "BED.html";
+          }, 10);
+          }
+          function verb() {
+              setTimeout(function(){ 
+                window.location.href = "CUT.html";
+          }, 10);
+          }
+          function animals() {
+              setTimeout(function(){ 
+                window.location.href = "BAT.html";
+          }, 10);
+          }
+          function noun() {
+              setTimeout(function(){ 
+                window.location.href = "ZIP.html";
+          }, 10);
+          }
+          function kitchen() {
+              setTimeout(function(){ 
+                window.location.href = "CUP.html";
+          }, 10);
+          }
+          function NewGame() {
+              setTimeout(function(){ 
+                window.location.href = "NewGame.html";
+          }, 10);
+          }
+   </script>
+   </head>
+   <body>
+       <body style="overflow: hidden;">
+        <div class="box" id="ArrangeCategory">
+            <div id="menuicon"> 
+          <img src="SYMBOLS/menubutton.png" onclick="NewGame();" width="60" height="60"><br/>
+          </div> 
+          <div class="center" style="padding: 6% 0;text-align: center;">
+            <h1 style="color: #ea9d12;font-size: 80px;letter-spacing: 14px;">&nbsp;CHOOSE CATEGORY</h1>
+              <br/>
+              <div id="center" style="margin-left: 17.5%;">
+              <table style="width: 100%;">
+                <tbody>
+                  <tr>
+                    <td><img src="ArrangeTheLetters/adjective.png" onclick="adjective();" style="width: 400px;"></td>
+                    <td><img src="ArrangeTheLetters/objects.png" onclick="objects();" style="width: 400px;"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><br/></td>
+                  </tr>
+                  <tr>
+                    <td><img src="ArrangeTheLetters/verb.png" onclick="verb();" style="width: 400px;"></td>
+                    <td><img src="ArrangeTheLetters/animals.png" onclick="animals()" style="width: 400px;"></td>
+                  </tr>
+                  <td colspan="2"><br/></td>
+                </tr>
+                  <tr>
+                    <td><img src="ArrangeTheLetters/non.png" onclick="noun();" style="width: 400px;"></td>
+                    <td><img src="ArrangeTheLetters/kitchen.png" onclick="kitchen();" style="width: 400px;"></td>
+                  </tr>
+                </tbody>
+              </table></div>
+          </div>
+        </div>
+       </body>

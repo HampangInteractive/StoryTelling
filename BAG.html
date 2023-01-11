@@ -1,0 +1,78 @@
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<link rel="stylesheet" type="text/css" href="adjective.css"> 
+<head>
+    <style>
+      .box{
+      width: 100rem;
+      height: 56rem;          
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      }
+ 
+       #BAG {
+           background-image: url("ArrangeTheLetters/BG_IMG.png");
+           background-repeat: no-repeat;
+           background-size: contain;
+           font-family: 'Fredoka One';
+           font-size: 22px;
+           zoom: 90%;
+       }
+    
+   </style>
+   <script>
+        function BAG() {
+              var audio = document.getElementById("AUDIO_BAG");
+              audio.play();
+            }  
+        function BELL() {
+              setTimeout(function(){ 
+                window.location.href = "BELL.html";
+          }, 10);
+          }
+   </script>
+<body style="overflow: hidden;">
+    <div class="box" id="BAG">
+    <div class="center" style="padding: 25.8% 0;width: 90%;text-align: center;">
+      <table style="width: 100%;">
+        <tbody>
+          <tr>
+            <td style="width: 15%;">
+              <div id="PREV">
+                <img onclick="BELL();"  src="SYMBOLS/prev.png" width="70" height="70">
+              </div>
+            </td>
+            <td style="width: 85%;">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><img src="ArrangeTheLetters/pictures/CVC-BAG.png" onclick="BAG();" class="imageset"></td>
+                    <td>  <div class="center" style="padding: 6% 0;text-align: center;">
+                      <section style="text-transform: lowercase;" class="droppable-elements">
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="b"><span></span></div>
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="a"><span></span></div>
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="g"><span></span></div>
+                        </section>
+                        <section class="draggable-elements">
+                          <li class="fa-g draggable" draggable="true" style="color: #ffffff;" id="g"></li>
+                          <li class="fa-b draggable" draggable="true" style="color: #ffffff;" id="b"></li>
+                          <li class="fa-a draggable" draggable="true" style="color: #ffffff;" id="a"></li>
+                        </section>
+                  </div></td>
+                  </tr>
+                </tbody>
+              </table> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+   </body>
+   <script src="BAG.js"></script>
+   <audio id="AUDIO_BAG" src="ArrangeTheLetters/audio/bag.mp3" type="audio/mp3"></audio>

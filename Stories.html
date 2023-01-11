@@ -1,0 +1,122 @@
+<link rel="stylesheet" type="text/css" href="DeerAndSnail.css"> 
+<script src="modal.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<head>
+<style>
+   .box{
+   width: 100rem;
+   height: 56rem;          
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   }
+
+   #stories {
+       background-image: url("CLEANPAGE/STORIES.gif");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       zoom: 90%;
+   }
+ 
+</style>
+<script>
+            function DS() {
+              var audio = document.getElementById("DS");
+              audio.play();
+            }  
+            function TM() {
+              var audio = document.getElementById("TM");
+              audio.play();
+            }
+            function BT() {
+              var audio = document.getElementById("BT");
+              audio.play();
+            }
+</script>
+</head>
+<body>
+    <body style="overflow: hidden;">
+      
+        <div class="box" id="stories">
+            <nav>
+                <ul>
+                  <li><img src="CLEANPAGE/LOGO.png" width="220" height="105" style="margin-left: -115%;"></li>
+                  <li class="item"><a id="btnhome" href="index.html">HOME</a></li>
+                  <li class="item active"><a id="btnstories" href="Stories.html">STORIES</a></li>
+                  <li class="item"><a id="btnstories" href="NewGame.html">NEW GAME</a></li>
+                  <li class="item"><a id="btnabout" href="About.html">ABOUT US</a></li>
+                  <li class="item"><a id="btncontact"  href="Contact.html">CONTACT US</a></li>
+                  <li>
+                  <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit" style="border-radius: 8px;width: 34px;height: 34px;border: 2px solid #aaa;"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </li>       
+                </ul>
+              </nav>
+
+              <nav>
+                <ul>
+                    <li class="item" >  
+                        <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" src="CLEANPAGE/DS/STORY1.png" width="500" height="400">                          
+                                    </div>
+                           <a href="javascript:setTimeout(()=>{window.location = 'DSStory.html' },2700);">
+                        <button class="btnStories" onclick="DS();">READ NOW</button></a>
+                    
+                        <p style="font-size: medium;">
+                          One day, a deer boasts about being the most clever and<br>
+                          fastest animal in the rainforest. A little snail decides<br>
+                          to challenge the deer into a race and plays a clever<br>
+                          trick on the deer to reach it a lesson.<br>
+                        </p>  
+                    </li>
+
+                    <li class="item" >  
+                        <div class="content">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="CLEANPAGE/TM/STORY2.png" width="500" height="400">
+                           </div>
+                           <a href="javascript:setTimeout(()=>{window.location = 'TMStory.html' },3000);">
+                            <button class="btnStories" onclick="TM();">READ NOW</button></a>
+                    
+                            <p style="font-size: medium;">
+                              Tired and hungry, a turtle and his monkey companion<br>
+                              find a lone banana tree. Will the spirit of cooperation<br>
+                              enable them to share the sweet bounty,<br>
+                              or will greed prevail?<br>
+                            </p>  
+                    </li>
+
+                    <li class="item" >  
+                        <div class="content">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="CLEANPAGE/BT/STORY3.png" width="500" height="400">
+                            </div>
+                            <a href="javascript:setTimeout(()=>{window.location = 'BTStory.html' },3500);">
+                              <button class="btnStories" onclick="BT();">READ NOW</button></a>
+                         
+                              <p style="font-size: medium;">
+                              Once in a beautiful green garden, there lived a little gourd who<br>
+                              wanted to be as charming and lovely as the other vegetables<br>
+                              around her. Later, because of a deed that she had done,<br>
+                              her fate was change forever.<br>
+                            </p>  
+                    </li>
+                </ul>
+              </nav>
+        </div>
+
+</body>
+<audio id="DS" src="GAMESSTORY/DS/ds.mp3" type="audio/mp3"></audio>
+<audio id="TM" src="GAMESSTORY/TM/TM.mp3" type="audio/mp3"></audio>
+<audio id="BT" src="GAMESSTORY/BT/bt.mp3" type="audio/mp3"></audio>

@@ -1,0 +1,217 @@
+<link rel="stylesheet" type="text/css" href="DeerAndSnail.css"> 
+<script src="modal.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<head>
+<style>
+     #textMarking, #ArrangeInstructions{
+      visibility: hidden;
+    }
+   .box{
+   width: 100rem;
+   height: 56rem;          
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   }
+
+    #newgame {
+        background-image: url("CLEANPAGE/STORIES.gif");
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: 'Fredoka One';
+        font-size: 22px;
+        zoom: 90%;
+    }
+    #textMarking {
+        background-image: url("CLEANPAGE/STORIES.gif");
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: 'Fredoka One';
+        font-size: 22px;
+        zoom: 90%;
+    }
+    #ArrangeInstructions {
+        zoom: 80%;
+    }
+    
+</style>
+<script>
+          function myFunctionNewGame(){
+            document.getElementById("newgame").style.visibility = "visible";
+            document.getElementById("textMarking").style.visibility = "hidden";
+            document.getElementById("ArrangeInstructions").style.visibility = "hidden";   
+        };      
+          function myFunctiontextMarking(){
+            document.getElementById("newgame").style.visibility = "hidden";
+            document.getElementById("textMarking").style.visibility = "visible";
+            document.getElementById("ArrangeInstructions").style.visibility = "hidden";   
+        }; 
+        function myFunctionArrangeInstruction(){
+            document.getElementById("newgame").style.visibility = "hidden";
+            document.getElementById("textMarking").style.visibility = "hidden";
+            document.getElementById("ArrangeInstructions").style.visibility = "visible";   
+        }; 
+
+          function DSGame() {
+              setTimeout(function(){ 
+                window.location.href = "DSGame.html";
+          }, 10);
+          }
+          function TMGame() {
+              setTimeout(function(){ 
+                window.location.href = "TMGame.html";
+          }, 10);
+          }
+          function BTGame() {
+              setTimeout(function(){ 
+                window.location.href = "BTGame.html";
+          }, 10);
+          }
+          function CHOOSEDS() {
+              var audio = document.getElementById("CHOOSEDS");
+              audio.play();
+            }
+          function CHOOSETM() {
+              var audio = document.getElementById("CHOOSETM");
+              audio.play();
+            }
+          function CHOOSEBT() {
+              var audio = document.getElementById("CHOOSEBT");
+              audio.play();
+            }
+          function ArrangeCategory() {
+              setTimeout(function(){ 
+                window.location.href = "Category.html";
+          }, 10);
+          }
+       
+</script>
+</head>
+<body>
+    <body style="overflow: hidden;">
+        <div class="box" id="newgame">
+            <nav>
+                <ul>
+                  <li><img src="CLEANPAGE/LOGO.png" width="220" height="105" style="margin-left: -115%;"></li>
+                  <li class="item"><a id="btnhome" href="index.html">HOME</a></li>
+                  <li class="item"><a id="btnstories" href="Stories.html">STORIES</a></li>
+                  <li class="item active"><a id="btnstories" href="NewGame.html">NEW GAME</a></li>
+                  <li class="item"><a id="btnabout" href="About.html">ABOUT US</a></li>
+                  <li class="item"><a id="btncontact"  href="Contact.html">CONTACT US</a></li>
+                  <li>
+                  <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit" style="border-radius: 8px;width: 34px;height: 34px;border: 2px solid #aaa;"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </li>       
+                </ul>
+              </nav>
+            <table width="90%" style="margin-left: auto;margin-right: auto;"> 
+            <tbody>
+              <tr>
+                <td style="text-align: center;"><img src="SYMBOLS/arrangeletters.png" style="width: 60%;"></td>
+                <td></td>
+                <td style="text-align: center;"><img src="SYMBOLS/textmarking.png" style="width: 60%;"></td>
+              </tr>
+              <tr>
+              <td style="text-align: center;"><img src="SYMBOLS/BLUEBTN.png" style="width: 40%; cursor: pointer;" onclick="myFunctionArrangeInstruction();InstructionVideoPlay();"></td>
+                <td></td>
+                <td style="text-align: center;"><img src="SYMBOLS/ORNGBTN.png" style="width: 40%; cursor: pointer;" onclick="myFunctiontextMarking();"></td>
+              </tr>
+            </tbody>
+          </table>
+  
+        </div>
+  
+        <div class="box" id="textMarking">
+        <nav>
+            <div id="logo"> 
+                <img src="CLEANPAGE/LOGO.png" width="200" height="100">
+                </div> 
+            <ul>
+              <li class="item"><a id="btnhome" href="index.html">HOME</a></li>
+              <li class="item"><a id="btnstories" href="Stories.html">STORIES</a></li>
+              <li class="item active"><a id="btnstories" href="NewGame.html">NEW GAME</a></li>
+              <li class="item"><a id="btnabout" href="About.html">ABOUT US</a></li>
+              <li class="item"><a id="btncontact"  href="Contact.html">CONTACT US</a></li>
+              <li>
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit" style="border-radius: 8px;width: 34px;height: 34px;border: 2px solid #aaa;"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </li>       
+            </ul>
+          </nav>
+          <div id="center">
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center;">
+                      <div><img src="PICTURES/DEERANDSNAIL.png" width="80%" height="50%"></div>
+                    </td>
+                    <td style="text-align: center;">
+                      <div><img src="PICTURES/TURTLEANDMONKEY.png" width="80%" height="50%"></div>           
+                    </td>
+                    <td style="text-align: center;">
+                      <div><img src="PICTURES/BITTER GOURD.png" width="80%" height="50%"></div>           
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">
+                      <br/>
+                      <div><img id="DSsoundonoff8123" onclick="CHOOSEDS(); DSGame();" style="cursor: pointer;" src="PICTURES/ds1.png" width="50%"></div>              
+                    </td>
+                    <td style="text-align: center;">
+                      <br/>
+                      <div><img id="DSsoundonoff8321" onclick="CHOOSETM(); TMGame();" style="cursor: pointer;" src="PICTURES/tm2.png" width="50%"></div>             
+                    </td>
+                    
+                    <td style="text-align: center;">
+                      <br/>
+                      <div><img id="DSsoundonoff8231" onclick="CHOOSEBT(); BTGame();" style="cursor: pointer;" src="PICTURES/bt3.png" width="50%"></div>              
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              </div>
+        </div>
+
+        <div class="box" id="ArrangeInstructions">
+          <div class="center" style="text-align: center; margin-top: 2rem;">      
+            <div id="VIDEOFLOAT"> 
+              <a onclick="myFunctionNewGame(); InstructionVideoPause();"><img src="SYMBOLS/menubutton.png" width="50" height="50"></a>
+  
+              <a onclick="ArrangeCategory(); InstructionVideoPause();"><img src="SYMBOLS/next.png" width="50" height="50"></a>
+              </div> 
+            
+            <div style="text-align: center;">
+            <video id="InstructionVideo" width="90%" controls>
+              <source src="ArrangeTheLetters/INSTRUCTIONS_ARRANGETHELETTERS.mp4" type="video/mp4">
+            </video>
+            <script>
+              var InstructionVid = document.getElementById("InstructionVideo"); 
+              function InstructionVideoPlay() { 
+                InstructionVid.play(); 
+              } 
+              function InstructionVideoPause() { 
+                InstructionVid.pause(); 
+              } 
+            </script>
+            </div>
+          </div>
+        </div>
+
+</body>
+<div id="center" style="margin-left: 20%;">
+<audio id="CHOOSEDS" src="voice/DS/CH.mp3" type="audio/mp3"></audio>
+<audio id="CHOOSETM" src="voice/TM/CH.mp3" type="audio/mp3"></audio>
+<audio id="CHOOSEBT" src="voice/BT/CH.mp3" type="audio/mp3"></audio>

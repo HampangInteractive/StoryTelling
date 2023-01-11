@@ -1,0 +1,2651 @@
+<link rel="stylesheet" type="text/css" href="DeerAndSnail.css"> 
+<script src="modal.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<head>
+    
+<style> #TM13, #TMMode, #TMEQLIVES, #TMEQ1, #TMEQ2, #TMEQ3, #TMESGAMEOVER, #TMESCORE, #TMMQLIVES, #TMMQ1, #TMMQ2,
+        #TMMQ3, #TMMSGAMEOVER, #TMMSCORE, #TMHQLIVES, #TMHQ1, #TMHQ2, #TMHQ3, #TMHSGAMEOVER, #TMHSCORE, #TMCONGRATS{
+     visibility: hidden;
+   }
+   .box{
+       width: 100rem;
+       height: 56rem;          
+       position: absolute;
+       left: 0;
+       right: 0;
+       margin: 0 auto;
+       }
+   div.box:empty {
+         display: none
+       }
+   #more {display: none;}
+   .buttonLater {
+     font-family: 'Fredoka One';
+     padding: 15px 30px;
+     border: 0px solid #ffffff;
+     border-radius: 0.5rem;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-size: 1.5rem;
+     user-select: none;
+     cursor: pointer;
+     background-image: linear-gradient(#ff4700, #b10000);
+     color: #ffffff;
+     letter-spacing: 1px;
+   }
+   .buttonLetsGo {
+         font-family: 'Fredoka One';
+         padding: 15px 30px;
+         border: 0px solid #ffffff;
+         border-radius: 0.5rem;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         font-size: 1.5rem;
+         user-select: none;
+         cursor: pointer;
+         background-image: linear-gradient(#48cd04, #2b7000);
+         color: #ffffff;
+         letter-spacing: 1px;
+       }
+   .center {
+       text-align: center;
+     }
+   #TM12 {
+       background-image: url("pages/TM/choosedificulty.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TM13 {
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 80%;
+   }
+   #TMMode{
+       background-image: url("pages/TM/choosedificulty.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMEQ1 {
+       background-image: url("CLEANPAGE/TM/EASY.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMEQ2 {
+       background-image: url("CLEANPAGE/TM/EASY.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMEQ3 {
+       background-image: url("CLEANPAGE/TM/EASY.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMESGAMEOVER {
+     background-color: black;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMESCORE {
+       background-image: url("CLEANPAGE/TM/TMEQSCORE.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMMSGAMEOVER {
+     background-color: black;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMMSCORE {
+       background-image: url("CLEANPAGE/TM/TMMQSCORE.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMHSGAMEOVER {
+     background-color: black;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMHSCORE {
+       background-image: url("CLEANPAGE/TM/TMHQSCORE.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   }
+   #TMMQ1 {
+       background-image: url("CLEANPAGE/TM/MEDIUM.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMMQ2 {
+       background-image: url("CLEANPAGE/TM/MEDIUM.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMMQ3 {
+       background-image: url("CLEANPAGE/TM/MEDIUM.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMHQ1 {
+       background-image: url("CLEANPAGE/TM/DIFFICULT.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMHQ2 {
+       background-image: url("CLEANPAGE/TM/DIFFICULT.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMHQ3 {
+       background-image: url("CLEANPAGE/TM/DIFFICULT.png");
+       background-repeat: no-repeat;
+       background-size: contain;
+       font-family: 'Fredoka One';
+       font-size: 22px;
+       transition-property: opacity, left;
+       transition-duration: 3s, 5s, 2s, 1s;
+       zoom: 90%;
+   } 
+   #TMCONGRATS {
+     background-image: url("pages/CONGRATULATIONS.gif");
+     background-repeat: no-repeat;
+           background-size: contain;
+           padding: 10%;
+           zoom: 80%;
+   }
+</style>
+<script>
+        function myFunctionTM12(){
+            document.getElementById("TM12").style.visibility = "visible";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTM13(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "visible";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMode(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "visible";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };   
+        function myFunctionTMEQ1(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "visible"; 
+            document.getElementById("TMEQ1").style.visibility = "visible";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMEQ2(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "visible"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "visible";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMEQ3(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "visible"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "visible";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMEQGAMEOVER(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "visible";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMEQSCORE(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "visible";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMQ1(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "visible";
+            document.getElementById("TMMQ1").style.visibility = "visible";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMQ2(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "visible";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "visible";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMQ3(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "visible";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "visible";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMQGAMEOVER(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "visible";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMMQSCORE(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "visible";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMHQ1(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "visible";  
+            document.getElementById("TMHQ1").style.visibility = "visible";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMHQ2(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "visible";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "visible";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMHQ3(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "visible";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "visible"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };  
+        function myFunctionTMHQGAMEOVER(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "visible";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden";  
+        }; 
+        function myFunctionTMHSCORE(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "visible";  
+            document.getElementById("TMCONGRATS").style.visibility = "hidden"; 
+        };
+        function myFunctionTMCONGRATS(){
+            document.getElementById("TM12").style.visibility = "hidden";
+            document.getElementById("TM13").style.visibility = "hidden";
+            document.getElementById("TMMode").style.visibility = "hidden";  
+            document.getElementById("TMEQLIVES").style.visibility = "hidden"; 
+            document.getElementById("TMEQ1").style.visibility = "hidden";     
+            document.getElementById("TMEQ2").style.visibility = "hidden";   
+            document.getElementById("TMEQ3").style.visibility = "hidden";  
+            document.getElementById("TMESGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMESCORE").style.visibility = "hidden";  
+            document.getElementById("TMMQLIVES").style.visibility = "hidden";
+            document.getElementById("TMMQ1").style.visibility = "hidden";  
+            document.getElementById("TMMQ2").style.visibility = "hidden";  
+            document.getElementById("TMMQ3").style.visibility = "hidden";  
+            document.getElementById("TMMSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMMSCORE").style.visibility = "hidden";    
+            document.getElementById("TMHQLIVES").style.visibility = "hidden";  
+            document.getElementById("TMHQ1").style.visibility = "hidden";  
+            document.getElementById("TMHQ2").style.visibility = "hidden";  
+            document.getElementById("TMHQ3").style.visibility = "hidden"; 
+            document.getElementById("TMHSGAMEOVER").style.visibility = "hidden";  
+            document.getElementById("TMHSCORE").style.visibility = "hidden";  
+            document.getElementById("TMCONGRATS").style.visibility = "visible"; 
+        };
+          
+        function myFunctionCLEARTMEQ(){
+              document.getElementById("id195").style.borderStyle = "none";
+              document.getElementById("id195").style.textDecoration = "none";
+              document.getElementById("id205").style.borderStyle = "none";
+              document.getElementById("id205").style.textDecoration = "none";
+              document.getElementById("id216").style.borderStyle = "none";
+              document.getElementById("id216").style.textDecoration = "none";
+              document.getElementById("id219").style.borderStyle = "none";
+              document.getElementById("id219").style.textDecoration = "none";
+            }
+        function myFunctionCLEARTMMQ(){
+              document.getElementById("id227").style.textDecoration = "none";
+              document.getElementById("id236").style.textDecoration = "none";
+              document.getElementById("id247").style.textDecoration = "none";
+              document.getElementById("id249").style.textDecoration = "none";
+              document.getElementById("id258").style.textDecoration = "none";
+              document.getElementById("id267").style.textDecoration = "none";
+              document.getElementById("id277").style.textDecoration = "none";
+            }
+        function myFunctionCLEARTMHQ(){
+              document.getElementById("id298").style.textDecoration = "none";
+              document.getElementById("id298").style.borderStyle = "none";
+              document.getElementById("id298").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id304").style.textDecoration = "none";
+              document.getElementById("id304").style.borderStyle = "none";
+              document.getElementById("id304").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id307").style.textDecoration = "none";
+              document.getElementById("id307").style.borderStyle = "none";
+              document.getElementById("id307").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id319").style.textDecoration = "none";
+              document.getElementById("id319").style.borderStyle = "none";
+              document.getElementById("id319").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id324").style.textDecoration = "none";
+              document.getElementById("id324").style.borderStyle = "none";
+              document.getElementById("id324").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id326").style.textDecoration = "none";
+              document.getElementById("id326").style.borderStyle = "none";
+              document.getElementById("id326").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id330").style.textDecoration = "none";
+              document.getElementById("id330").style.borderStyle = "none";
+              document.getElementById("id330").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id351").style.textDecoration = "none";
+              document.getElementById("id351").style.borderStyle = "none";
+              document.getElementById("id351").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id355").style.textDecoration = "none";
+              document.getElementById("id355").style.borderStyle = "none";
+              document.getElementById("id355").style.backgroundColor = "TRANSPARENT";
+              document.getElementById("id365").style.textDecoration = "none";
+              document.getElementById("id365").style.borderStyle = "none";
+              document.getElementById("id365").style.backgroundColor = "TRANSPARENT";
+            }
+              
+        function TMStoryPause12()
+          {
+            var myAudio11 = document.getElementById("TMstory12");
+            var image11 = document.getElementById('TMsoundonoff12');
+            if(myAudio11.play) {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/soundonbutton.png";
+            }
+            else {
+              myAudio11.pause();
+              image11.src = "SYMBOLS/soundoffbutton.png";
+            }
+          }
+        function TMStoryPause12BACK()
+          {
+            var myAudio11 = document.getElementById("TMstory12");
+            var image11 = document.getElementById('TMsoundonoff12');
+            if(myAudio11.pause) {
+                myAudio11.play();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/soundoffbutton.png";
+            }
+          }
+        function TMPlay12()
+            {
+              var myAudio12 = document.getElementById("TMstory12");
+              var image12 = document.getElementById('TMsoundonoff12');
+              if(myAudio12.paused) {
+                myAudio12.play();
+                image12.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio12.pause();
+                image12.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+// ___________________TM GAME PLAY
+          function VOICEPLAYTMEQ1()
+            {
+              var myAudio11 = document.getElementById("VOICETMEQ1");
+              var image11 = document.getElementById('soundonoffTMEQ1');
+              if(myAudio11.paused) {
+                  myAudio11.play();
+                  image11.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMEQ2()
+            {
+              var myAudio12 = document.getElementById("VOICETMEQ2");
+              var image12 = document.getElementById('soundonoffTMEQ2');
+              if(myAudio12.paused) {
+                  myAudio12.play();
+                  image12.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio12.pause();
+                image12.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMEQ3()
+            {
+              var myAudio13 = document.getElementById("VOICETMEQ3");
+              var image13 = document.getElementById('soundonoffTMEQ3');
+              if(myAudio13.paused) {
+                  myAudio13.play();
+                  image13.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio13.pause();
+                image13.src = "SYMBOLS/play.png";
+              }
+            }       
+          function VOICEPLAYTMMQ1()
+            {
+              var myAudio14 = document.getElementById("VOICETMMQ1");
+              var image14 = document.getElementById('soundonoffTMMQ1');
+              if(myAudio14.paused) {
+                  myAudio14.play();
+                  image14.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio14.pause();
+                image14.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMMQ2()
+            {
+              var myAudio15 = document.getElementById("VOICETMMQ2");
+              var image15 = document.getElementById('soundonoffTMMQ2');
+              if(myAudio15.paused) {
+                  myAudio15.play();
+                  image15.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio15.pause();
+                image15.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMMQ3()
+            {
+              var myAudio11 = document.getElementById("VOICETMMQ3");
+              var image11 = document.getElementById('soundonoffTMMQ3');
+              if(myAudio11.paused) {
+                myAudio11.play();
+                image11.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMHQ1()
+            {
+              var myAudio18 = document.getElementById("VOICETMHQ1");
+              var image18 = document.getElementById('soundonoffTMHQ1');
+              if(myAudio18.paused) {
+                  myAudio18.play();
+                  image18.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio18.pause();
+                image18.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMHQ2()
+            {
+              var myAudio19 = document.getElementById("VOICETMHQ2");
+              var image19 = document.getElementById('soundonoffTMHQ2');
+              if(myAudio19.paused) {
+                  myAudio19.play();
+                  image19.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio19.pause();
+                image19.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICEPLAYTMHQ3()
+            {
+              var myAudio11 = document.getElementById("VOICETMHQ3");
+              var image11 = document.getElementById('soundonoffTMHQ3');
+              if(myAudio11.paused) {
+                myAudio11.play();
+                image11.src = "SYMBOLS/mute.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/play.png";
+              }
+            }
+          function VOICECONFIRMTM()
+            {
+              var myAudio20 = document.getElementById("TMConfirmation");
+              var image20 = document.getElementById('soundonoffConfirmTM');
+              if(myAudio20.paused) {
+                  myAudio20.play();
+                  image20.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio20.pause();
+                image20.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+ 
+          function VOICEGAMEOVERPLAYTME()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('soundonoffGameOVERTME');
+              if(myAudio11.paused) {
+                  myAudio11.play();
+                  image11.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+          function VOICEGAMEOVERBACKTME()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('soundonoffGameOVERTME');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/mute.png";
+              }
+            }
+
+          function VOICEGAMEOVERPLAYTMM()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('TMsoundonoffGameOVERTMM');
+              if(myAudio11.paused) {
+                  myAudio11.play();
+                  image11.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+          function VOICEGAMEOVERBACKTMM()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('TMsoundonoffGameOVERTMM');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/mute.png";
+              }
+            }
+
+          function VOICEGAMEOVERPLAYTMH()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('TMsoundonoffGameOVERTMH');
+              if(myAudio11.paused) {
+                  myAudio11.play();
+                  image11.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio11.pause();
+                image11.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+          function VOICEGAMEOVERBACKTMH()
+            {
+              var myAudio11 = document.getElementById("TMGAMEOVER");
+              var image11 = document.getElementById('TMsoundonoffGameOVERTMH');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/mute.png";
+              }
+            }
+
+          function VOICEPLAYTMEQ1BACK()
+            {
+              var myAudio11 = document.getElementById("VOICETMEQ1");
+              var image11 = document.getElementById('soundonoffTMEQ1');
+              if(myAudio11.paused) {
+                  myAudio11.play();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMEQ2BACK()
+            {
+              var myAudio12 = document.getElementById("VOICETMEQ2");
+              var image12 = document.getElementById('soundonoffTMEQ2');
+              if(myAudio12.paused) {
+                  myAudio12.play();
+                  myAudio12.currentTime = 0;
+                  image12.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMEQ3BACK()
+            {
+              var myAudio13 = document.getElementById("VOICETMEQ3");
+              var image13 = document.getElementById('soundonoffTMEQ3');
+              if(myAudio13.paused) {
+                  myAudio13.play();
+                  myAudio13.currentTime = 0;
+                  image13.src = "SYMBOLS/mute.png";
+              }
+            }   
+          function VOICEPLAYTMMQ1BACK()
+            {
+              var myAudio14 = document.getElementById("VOICETMMQ1");
+              var image14 = document.getElementById('soundonoffTMMQ1');
+              if(myAudio14.paused) {
+                  myAudio14.play();
+                  myAudio14.currentTime = 0;
+                  image14.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMMQ2BACK()
+            {
+              var myAudio15 = document.getElementById("VOICETMMQ2");
+              var image15 = document.getElementById('soundonoffTMMQ2');
+              if(myAudio15.paused) {
+                  myAudio15.play();
+                  myAudio15.currentTime = 0;
+                  image15.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMMQ3BACK()
+            {
+              var myAudio11 = document.getElementById("VOICETMMQ3");
+              var image11 = document.getElementById('soundonoffTMMQ3');
+              if(myAudio11.paused) {
+                myAudio11.play();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMHQ1BACK()
+            {
+              var myAudio18 = document.getElementById("VOICETMHQ1");
+              var image18 = document.getElementById('soundonoffTHMQ1');
+              if(myAudio18.paused) {
+                  myAudio18.play();
+                  myAudio18.currentTime = 0;
+                  image18.src = "SYMBOLS/mute.png";
+              }
+  
+            }
+          function VOICEPLAYTMHQ2BACK()
+            {
+              var myAudio19 = document.getElementById("VOICETMHQ2");
+              var image19 = document.getElementById('soundonoffTHMQ2');
+              if(myAudio19.paused) {
+                  myAudio19.play();
+                  myAudio19.currentTime = 0;
+                  image19.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPLAYTMHQ3BACK()
+            {
+              var myAudio11 = document.getElementById("VOICETMHQ3");
+              var image11 = document.getElementById('soundonoffTHMQ3');
+              if(myAudio11.paused) {
+                myAudio11.play();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+           
+          function VOICEPAUSETMEQ1()
+            {
+              var myAudio11 = document.getElementById("VOICETMEQ1");
+              var image11 = document.getElementById('soundonoffTMEQ1');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMEQ2()
+            {
+              var myAudio11 = document.getElementById("VOICETMEQ2");
+              var image11 = document.getElementById('soundonoffTMEQ2');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMEQ3()
+            {
+              var myAudio11 = document.getElementById("VOICETMEQ3");
+              var image11 = document.getElementById('soundonoffTMEQ3');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMMQ1()
+            {
+              var myAudio11 = document.getElementById("VOICETMMQ1");
+              var image11 = document.getElementById('soundonoffTMMQ1');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMMQ2()
+            {
+              var myAudio11 = document.getElementById("VOICETMMQ2");
+              var image11 = document.getElementById('soundonoffTMMQ2');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMMQ3()
+            {
+              var myAudio11 = document.getElementById("VOICETMMQ3");
+              var image11 = document.getElementById('soundonoffTMMQ3');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMHQ1()
+            {
+              var myAudio11 = document.getElementById("VOICETMHQ1");
+              var image11 = document.getElementById('soundonoffTMHQ1');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMHQ2()
+            {
+              var myAudio11 = document.getElementById("VOICETMHQ2");
+              var image11 = document.getElementById('soundonoffTMHQ2');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICEPAUSETMHQ3()
+            {
+              var myAudio11 = document.getElementById("VOICETMHQ3");
+              var image11 = document.getElementById('soundonoffTMHQ3');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  image11.src = "SYMBOLS/play.png";
+              }
+              else {
+                myAudio11.pause();
+                myAudio11.currentTime = 0;
+                image11.src = "SYMBOLS/mute.png";
+              }
+            }
+          function VOICETMCONFIRMPAUSE()
+            {
+              var myAudio11 = document.getElementById("TMConfirmation");
+              var image11 = document.getElementById('soundonoffConfirmTM');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+       
+          function TMSTOPAUDIO() {
+              var myAudio1 = document.getElementById('VOICETMEQ1');
+              myAudio1.currentTime = 0;
+              var myAudio2 = document.getElementById('VOICETMEQ2');
+              myAudio2.currentTime = 0;
+              var myAudio3 = document.getElementById('VOICETMEQ3');
+              myAudio3.currentTime = 0;
+
+              var myAudio4 = document.getElementById('VOICETMMQ1');
+              myAudio4.currentTime = 0;
+              var myAudio5 = document.getElementById('VOICETMMQ2');
+              myAudio5.currentTime = 0;
+              var myAudio6 = document.getElementById('VOICETMMQ3');
+              myAudio6.currentTime = 0;
+
+              var myAudio8 = document.getElementById('VOICETMHQ1');
+              myAudio8.currentTime = 0;
+              var myAudio9 = document.getElementById('VOICETMHQ2');
+              myAudio9.currentTime = 0;
+              var myAudio10 = document.getElementById('VOICETMHQ3');
+              myAudio10.currentTime = 0;
+            }
+
+          function letsgo(){
+          document.getElementById("TMletsgo").play();
+          }
+          function LaterIhaveToGo(){
+          document.getElementById("TMLaterIhaveToGo").play();
+          }   
+          function Later() {
+            setTimeout(function(){document.getElementById("TMLater").play();},50)
+          }     
+ 
+          function CHOOSETM() {
+              var audio = document.getElementById("CHOOSETM");
+              audio.play();
+            }
+          function EASY() {
+              var audio = document.getElementById("TMEASY");
+              audio.play();
+            }
+          function MEDIUM() {
+              var audio = document.getElementById("TMMEDIUM");
+              audio.play();
+            }          
+          function DIFFICULT() {
+              var audio = document.getElementById("TMDIFFICULT");
+              audio.play();
+            }
+          function correct() {
+              var audio = document.getElementById("TMcorrect");
+              audio.play();
+            }      
+            
+          function TMEQcorrect() {
+            var x1 = document.getElementById("TMEQLIVES1");
+            var x2 = document.getElementById("TMEQLIVES2");
+            var x3 = document.getElementById("TMEQLIVES3");
+            var x4 = document.getElementById("TMEQLIVES4");
+            var x5 = document.getElementById("TMEQLIVES5");
+
+            if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+            TMfantastic();
+            TMEQFANTASTIC();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+            TMgreat();
+            TMEQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+            TMgreat();
+            TMEQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMEQYAY();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();  
+            TMEQYAY();
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMEQYAY();
+            } else {
+            TMyay();
+            TMEQYAY();
+            }                
+            } 
+          function TMMQcorrect() {
+            var x1 = document.getElementById("TMMQLIVES1");
+            var x2 = document.getElementById("TMMQLIVES2");
+            var x3 = document.getElementById("TMMQLIVES3");
+            var x4 = document.getElementById("TMMQLIVES4");
+            var x5 = document.getElementById("TMMQLIVES5");
+
+            if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+            TMfantastic();
+            TMMQFANTASTIC();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+            TMgreat();
+            TMMQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+            TMgreat();
+            TMMQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMMQYAY();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();  
+            TMMQYAY();
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMMQYAY();
+            } else {
+            TMyay();
+            TMMQYAY();
+            }                
+            } 
+          function TMHQcorrect() {
+            var x1 = document.getElementById("TMHQLIVES1");
+            var x2 = document.getElementById("TMHQLIVES2");
+            var x3 = document.getElementById("TMHQLIVES3");
+            var x4 = document.getElementById("TMHQLIVES4");
+            var x5 = document.getElementById("TMHQLIVES5");
+
+            if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+            TMfantastic();
+            TMHQFANTASTIC();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+            TMgreat();
+            TMHQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+            TMgreat();
+            TMHQGREAT();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMHQYAY();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();  
+            TMHQYAY();
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+            TMyay();
+            TMHQYAY();
+            } else {
+            TMyay();
+            TMHQYAY();
+            }                
+            } 
+
+          function wrongTMEQ() {
+            var x1 = document.getElementById("TMEQLIVES1");
+            var x2 = document.getElementById("TMEQLIVES2");
+            var x3 = document.getElementById("TMEQLIVES3");
+            var x4 = document.getElementById("TMEQLIVES4");
+            var x5 = document.getElementById("TMEQLIVES5");
+
+            var xDSON1 = document.getElementById("TMEQLIVESON1");
+            var xDSON2 = document.getElementById("TMEQLIVESON2");
+            var xDSON3 = document.getElementById("TMEQLIVESON3");
+            var xDSON4 = document.getElementById("TMEQLIVESON4");
+            var xDSON5 = document.getElementById("TMEQLIVESON5");
+
+            var xDSOFF1 = document.getElementById("TMEQLIVESOFF1");
+            var xDSOFF2 = document.getElementById("TMEQLIVESOFF2");
+            var xDSOFF3 = document.getElementById("TMEQLIVESOFF3");
+            var xDSOFF4 = document.getElementById("TMEQLIVESOFF4");
+            var xDSOFF5 = document.getElementById("TMEQLIVESOFF5");
+
+            if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong"); 
+                audio.play();
+           } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+                myVar = setTimeout(VOICEGAMEOVERPLAYTME, 1200);
+                myVar = setTimeout(myFunctionTMEQGAMEOVER, 1200);               
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+            } else {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+              }
+              VOICEPAUSETMEQ1();
+              VOICEPAUSETMEQ2();
+              VOICEPAUSETMEQ3();
+          }     
+          function wrongTMMQ() {
+            var x1 = document.getElementById("TMMQLIVES1");
+            var x2 = document.getElementById("TMMQLIVES2");
+            var x3 = document.getElementById("TMMQLIVES3");
+            var x4 = document.getElementById("TMMQLIVES4");
+            var x5 = document.getElementById("TMMQLIVES5");
+
+            var xDSON1 = document.getElementById("TMMQLIVESON1");
+            var xDSON2 = document.getElementById("TMMQLIVESON2");
+            var xDSON3 = document.getElementById("TMMQLIVESON3");
+            var xDSON4 = document.getElementById("TMMQLIVESON4");
+            var xDSON5 = document.getElementById("TMMQLIVESON5");
+
+            var xDSOFF1 = document.getElementById("TMMQLIVESOFF1");
+            var xDSOFF2 = document.getElementById("TMMQLIVESOFF2");
+            var xDSOFF3 = document.getElementById("TMMQLIVESOFF3");
+            var xDSOFF4 = document.getElementById("TMMQLIVESOFF4");
+            var xDSOFF5 = document.getElementById("TMMQLIVESOFF5");
+
+           if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong"); 
+                audio.play();
+           } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+                myVar = setTimeout(VOICEGAMEOVERPLAYTMM, 1200);
+                myVar = setTimeout(myFunctionTMMQGAMEOVER, 1200);
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+            } else {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+              }
+              VOICEPAUSETMMQ1();
+              VOICEPAUSETMMQ2();
+              VOICEPAUSETMMQ3();
+          }     
+          function wrongTMHQ() {
+            var x1 = document.getElementById("TMHQLIVES1");
+            var x2 = document.getElementById("TMHQLIVES2");
+            var x3 = document.getElementById("TMHQLIVES3");
+            var x4 = document.getElementById("TMHQLIVES4");
+            var x5 = document.getElementById("TMHQLIVES5");
+
+            var xDSON1 = document.getElementById("TMHQLIVESON1");
+            var xDSON2 = document.getElementById("TMHQLIVESON2");
+            var xDSON3 = document.getElementById("TMHQLIVESON3");
+            var xDSON4 = document.getElementById("TMHQLIVESON4");
+            var xDSON5 = document.getElementById("TMHQLIVESON5");
+
+            var xDSOFF1 = document.getElementById("TMHQLIVESOFF1");
+            var xDSOFF2 = document.getElementById("TMHQLIVESOFF2");
+            var xDSOFF3 = document.getElementById("TMHQLIVESOFF3");
+            var xDSOFF4 = document.getElementById("TMHQLIVESOFF4");
+            var xDSOFF5 = document.getElementById("TMHQLIVESOFF5");
+
+            if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "block") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong"); 
+                audio.play();
+           } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "block" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "block" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "block" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "block"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+            } else if (x1.style.display === "block" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+                myVar = setTimeout(VOICEGAMEOVERPLAYTMH, 1200);
+                myVar = setTimeout(myFunctionTMHQGAMEOVER, 1200);
+            } else if (x1.style.display === "none" && x2.style.display === "none" && x3.style.display === "none" && x4.style.display === "none" && x5.style.display === "none") {
+                x1.style.display = "none"; x2.style.display = "none"; x3.style.display = "none"; x4.style.display = "none"; x5.style.display = "none";
+                xDSON1.style.display = "none"; xDSON2.style.display = "none"; xDSON3.style.display = "none"; xDSON4.style.display = "none"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "block"; xDSOFF2.style.display = "block"; xDSOFF3.style.display = "block"; xDSOFF4.style.display = "block"; xDSOFF5.style.display = "block";
+            } else {
+                x1.style.display = "block"; x2.style.display = "block"; x3.style.display = "block"; x4.style.display = "block"; x5.style.display = "none";
+                xDSON1.style.display = "block"; xDSON2.style.display = "block"; xDSON3.style.display = "block"; xDSON4.style.display = "block"; xDSON5.style.display = "none";
+                xDSOFF1.style.display = "none"; xDSOFF2.style.display = "none"; xDSOFF3.style.display = "none"; xDSOFF4.style.display = "none"; xDSOFF5.style.display = "block";
+                var audio = document.getElementById("TMwrong");
+                audio.play();
+              }
+              VOICEPAUSETMHQ1();
+              VOICEPAUSETMHQ2();
+              VOICEPAUSETMHQ3();
+          }     
+
+          function RechargeTMEQ() {
+            var x1 = document.getElementById("TMEQLIVES1");
+            var x2 = document.getElementById("TMEQLIVES2");
+            var x3 = document.getElementById("TMEQLIVES3");
+            var x4 = document.getElementById("TMEQLIVES4");
+            var x5 = document.getElementById("TMEQLIVES5");
+            x1.style.display = "block"; 
+            x2.style.display = "block"; 
+            x3.style.display = "block"; 
+            x4.style.display = "block"; 
+            x5.style.display = "block";
+            }
+          function RechargeTMMQ() {
+            var x1 = document.getElementById("TMMQLIVES1");
+            var x2 = document.getElementById("TMMQLIVES2");
+            var x3 = document.getElementById("TMMQLIVES3");
+            var x4 = document.getElementById("TMMQLIVES4");
+            var x5 = document.getElementById("TMMQLIVES5");
+            x1.style.display = "block"; 
+            x2.style.display = "block"; 
+            x3.style.display = "block"; 
+            x4.style.display = "block"; 
+            x5.style.display = "block";
+            }
+          function RechargeTMHQ() {
+            var x1 = document.getElementById("TMHQLIVES1");
+            var x2 = document.getElementById("TMHQLIVES2");
+            var x3 = document.getElementById("TMHQLIVES3");
+            var x4 = document.getElementById("TMHQLIVES4");
+            var x5 = document.getElementById("TMHQLIVES5");
+            x1.style.display = "block"; 
+            x2.style.display = "block"; 
+            x3.style.display = "block"; 
+            x4.style.display = "block"; 
+            x5.style.display = "block";
+            }
+
+          function RechargeStarTMEQ() {
+              var x1 = document.getElementById("TMEQLIVESON1");
+              var x2 = document.getElementById("TMEQLIVESON2");
+              var x3 = document.getElementById("TMEQLIVESON3");
+              var x4 = document.getElementById("TMEQLIVESON4");
+              var x5 = document.getElementById("TMEQLIVESON5");
+              x1.style.display = "block"; 
+              x2.style.display = "block"; 
+              x3.style.display = "block"; 
+              x4.style.display = "block"; 
+              x5.style.display = "block";
+            }
+          function RechargeStarTMMQ() {
+            var x1 = document.getElementById("TMMQLIVESON1");
+            var x2 = document.getElementById("TMMQLIVESON2");
+            var x3 = document.getElementById("TMMQLIVESON3");
+            var x4 = document.getElementById("TMMQLIVESON4");
+            var x5 = document.getElementById("TMMQLIVESON5");
+            x1.style.display = "block"; 
+            x2.style.display = "block"; 
+            x3.style.display = "block"; 
+            x4.style.display = "block"; 
+            x5.style.display = "block";
+            }
+          function RechargeStarTMHQ() {
+            var x1 = document.getElementById("TMHQLIVESON1");
+            var x2 = document.getElementById("TMHQLIVESON2");
+            var x3 = document.getElementById("TMHQLIVESON3");
+            var x4 = document.getElementById("TMHQLIVESON4");
+            var x5 = document.getElementById("TMHQLIVESON5");
+            x1.style.display = "block"; 
+            x2.style.display = "block"; 
+            x3.style.display = "block"; 
+            x4.style.display = "block"; 
+            x5.style.display = "block";
+            }
+
+// ---------------------TM EASY QUESTION
+          function TMEQYAY() {
+              document.getElementById("TMEQYAY").innerHTML = "YAY!";
+              document.getElementById("TMEQYOUDIDIT").innerHTML = " YOU DID IT!";
+              document.getElementById("TMEQOOPS").innerHTML = "Oops! It seems you missed some words";
+            }
+          function TMEQGREAT() {
+              document.getElementById("TMEQYAY").innerHTML = "GREAT!";
+              document.getElementById("TMEQYOUDIDIT").innerHTML = " YOU ARE IMPROVING!";
+              document.getElementById("TMEQOOPS").innerHTML = "You are almost there! Keep trying!";
+            }
+          function TMEQFANTASTIC() {
+              document.getElementById("TMEQYAY").innerHTML = "FANTASTIC!";
+              document.getElementById("TMEQYOUDIDIT").innerHTML = " YOU NAILED IT!";
+              document.getElementById("TMEQOOPS").innerHTML = "Way to go! You identified all the correct answers!";
+            }
+// ---------------------TM MEDIUM QUESTION
+          function TMMQYAY() {
+              document.getElementById("TMMQYAY").innerHTML = "YAY!";
+              document.getElementById("TMMQYOUDIDIT").innerHTML = " YOU DID IT!";
+              document.getElementById("TMMQOOPS").innerHTML = "Oops! It seems you missed some words";
+              yay();
+            }
+          function TMMQGREAT() {
+              document.getElementById("TMMQYAY").innerHTML = "GREAT!";
+              document.getElementById("TMMQYOUDIDIT").innerHTML = " YOU ARE IMPROVING!";
+              document.getElementById("TMMQOOPS").innerHTML = "You are almost there! Keep trying!";
+              great();
+            }
+          function TMMQFANTASTIC() {
+              document.getElementById("TMMQYAY").innerHTML = "FANTASTIC!";
+              document.getElementById("TMMQYOUDIDIT").innerHTML = " YOU NAILED IT!";
+              document.getElementById("TMMQOOPS").innerHTML = "Way to go! You identified all the correct answers!";
+              fantastic();
+            }
+// ---------------------TM HARD QUESTION
+          function TMHQYAY() {
+              document.getElementById("TMHQYAY").innerHTML = "YAY!";
+              document.getElementById("TMHQYOUDIDIT").innerHTML = " YOU DID IT!";
+              document.getElementById("TMHQOOPS").innerHTML = "Oops! It seems you missed some words";
+            }
+          function TMHQGREAT() {
+              document.getElementById("TMHQYAY").innerHTML = "GREAT!";
+              document.getElementById("TMHQYOUDIDIT").innerHTML = " YOU ARE IMPROVING!";
+              document.getElementById("TMHQOOPS").innerHTML = "You are almost there! Keep trying!";
+            }
+          function TMHQFANTASTIC() {
+              document.getElementById("TMHQYAY").innerHTML = "FANTASTIC!";
+              document.getElementById("TMHQYOUDIDIT").innerHTML = " YOU NAILED IT!";
+              document.getElementById("TMHQOOPS").innerHTML = "Way to go! You identified all the correct answers!";
+            }
+
+          function congratsyoudidwonderfulTM1() {
+            setTimeout(function(){document.getElementById("congratsyoudidwonderfulTM").play();},1500)
+            }
+          function congratsyoudidwonderfulTMSTOP1()
+            {
+              var myAudio19 = document.getElementById("congratsyoudidwonderfulTM");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }
+          
+          function proceed() {
+            setTimeout(function(){document.getElementById("PROCEED").play();},200)
+            }
+          function playagain() {
+            setTimeout(function(){document.getElementById("playagain").play();},500)
+            }
+            function InstructionEasy() {
+              var audio = document.getElementById("TMEQinstructions");
+              audio.play();
+            }
+          function InstructionMeduim() {
+            var audio = document.getElementById("TMMQinstructions");
+            audio.play();
+          }
+          function InstructionHard() {
+            var audio = document.getElementById("TMHQinstructions");
+            audio.play();
+          }
+          function TMyay() {
+            setTimeout(function(){document.getElementById("TMyay").play();},2500)
+          }
+          function TMgreat() {
+            setTimeout(function(){document.getElementById("TMgreat").play();},2500)
+          }
+          function TMfantastic() {
+            setTimeout(function(){document.getElementById("TMfantastic").play();},2500)
+          }     
+          
+          function TMyayPause() {         
+              var myAudio19 = document.getElementById("TMyay");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }       
+          function TMgreatPause() {         
+              var myAudio19 = document.getElementById("TMgreat");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }  
+          function TMfantasticPause() {         
+              var myAudio19 = document.getElementById("TMfantastic");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }
+
+          function fantasticTM() {
+            setTimeout(function(){document.getElementById("TMfantastic").play();},2500)
+          }
+          function fantasticTMPause() {         
+              var myAudio19 = document.getElementById("TMfantastic");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }
+          function proceedalone() {
+            setTimeout(function(){document.getElementById("PROCEEDALONE").play();},200)
+            }
+      
+          function TURTLE() {
+              setTimeout(function(){document.getElementById("TURTLE").play();},800)
+            }
+          function MONKEY() {
+              setTimeout(function(){document.getElementById("MONKEY").play();},800)
+            }
+          function FELLDOWN() {
+              setTimeout(function(){document.getElementById("FELLDOWN").play();},800)
+            }
+          function THORNS() {
+              setTimeout(function(){document.getElementById("THORNS").play();},800)
+            }
+          function WATER() {
+              setTimeout(function(){document.getElementById("WATER").play();},800)
+            }
+          function LAUGHED() {
+              setTimeout(function(){document.getElementById("LAUGHED").play();},800)
+            }
+          function DROWN() {
+              setTimeout(function(){document.getElementById("DROWN").play();},800)
+            }
+          function FIRE() {
+              setTimeout(function(){document.getElementById("FIRE").play();},800)
+            }
+          function SWIM() {
+              setTimeout(function(){document.getElementById("SWIM").play();},800)
+            }
+          function DIVIDE() {
+              setTimeout(function(){document.getElementById("DIVIDE").play();},800)
+            }
+          function TWO() {
+              setTimeout(function(){document.getElementById("TWO").play();},800)
+            }
+          function PLANTING() {
+              setTimeout(function(){document.getElementById("PLANTING").play();},800)
+            }
+          function HUNGRY() {
+              setTimeout(function(){document.getElementById("HUNGRY").play();},800)
+            }
+          function FLOATING() {
+              setTimeout(function(){document.getElementById("FLOATING").play();},800)
+            }
+          function RIVER() {
+              setTimeout(function(){document.getElementById("RIVER").play();},800)
+            }
+          function CLIMBED() {
+              setTimeout(function(){document.getElementById("CLIMBED").play();},800)
+            }
+          function ATE() {
+              setTimeout(function(){document.getElementById("ATE").play();},800)
+            }
+          function BANANAS() {                                                                                  
+              setTimeout(function(){document.getElementById("BANANAS").play();},800)
+            }
+          function ANGRY() {
+              setTimeout(function(){document.getElementById("ANGRY").play();},800)
+            }
+          function WEEDS() {
+              setTimeout(function(){document.getElementById("WEEDS").play();},800)
+            }
+          function TREE() {
+              setTimeout(function(){document.getElementById("TREE").play();},800)
+            }
+          function ENEMIES() {
+              setTimeout(function(){document.getElementById("ENEMIES").play();},800)
+            }
+         
+          function myFunctionStories() {
+              setTimeout(function(){ 
+                window.location.href = "Stories.html";
+          }, 2700);
+          }
+
+</script>
+
+<body style="overflow: hidden;">
+    <div class="box" id="TM12">
+        <div class="center" style="padding: 6% 0;text-align: center;">
+          <h1 style="color: #ea9d12;font-size: 80px;letter-spacing: 14px;"><img id="TMsoundonoff12" onclick="TMPlay12();" src="SYMBOLS/soundonbutton.png" width="90" height="90">&nbsp;ARE YOU <BR/>READY TO HAVE<BR/>FUN?</h1>
+            <br/>
+            <button onclick="Later(); myVar = setTimeout(myFunctionStories, 400); TMStoryPause12();" class="buttonLater">Later</button>  
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+             <button onclick="letsgo(); myVar = setTimeout(myFunctionTM13, 2800); myVar = setTimeout(InstructionVideoPlayTM, 1500); TMStoryPause12();" class="buttonLetsGo">Lets go!</button>
+        </div>
+      </div>
+
+      <div class="box" id="TM13">
+        <div class="center" style="text-align: center; margin-top: 2rem;">      
+          <div id="VIDEOFLOAT"> 
+            <a onclick="myFunctionStories(); InstructionVideoPauseTM();"><img src="SYMBOLS/menubutton.png" width="50" height="50"></a>
+
+            <a onclick="myFunctionTMMode(); InstructionVideoPauseTM(); CHOOSETM();"><img src="SYMBOLS/next.png" width="50" height="50"></a>
+            </div> 
+          
+          <div style="text-align: center;">
+          <video id="InstructionVideoTM" width="90%" controls>
+            <source src="GAMESSTORY/TM/TMINSTRUCTIONS.mp4" type="video/mp4">
+          </video>
+          <script>
+            var InstructionTMVid = document.getElementById("InstructionVideoTM"); 
+            function InstructionVideoPlayTM() { 
+              InstructionTMVid.play(); 
+            } 
+            function InstructionVideoPauseTM() { 
+              InstructionTMVid.pause(); 
+            } 
+          </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="TMMode">
+        <div class="center" style="padding: 3% 0;text-align: center;">
+                <h1 style="color: #0765a6;font-size: 80px;letter-spacing: 14px;"> <img id="soundonoff" onclick="CHOOSETM();" src="SYMBOLS/soundoffbutton.png" width="100" height="100">
+                  CHOOSE DIFFICULTY</h1>
+                  <div class="container">
+        
+                  <button class="TMbtnEasy" onclick="EASY(); myVar = setTimeout(VOICEPLAYTMEQ1BACK, 2800); myVar = setTimeout(myFunctionTMEQ1, 2800); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ();">EASY</button>
+                      <br/>
+                        <button class="TMbtnMedium" onclick="MEDIUM(); myVar = setTimeout(VOICEPLAYTMMQ1BACK, 2800); myVar = setTimeout(myFunctionTMMQ1, 2800); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ();">MEDIUM</button>
+                      <br/>
+                        <button class="TMbtnDifficult" onclick="DIFFICULT(); myVar = setTimeout(VOICEPLAYTMHQ1BACK, 2800); myVar = setTimeout(myFunctionTMHQ1, 2800); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ();">DIFFICULT</button>
+                    </div> 
+                  
+                    <div id="VIDEOFLOAT1">
+                      <a onclick="myFunctionStories();">
+                      <img src="SYMBOLS/menubutton.png" width="70" height="70">
+                      </a>
+                    <a onclick="myFunctionTM12();">
+                        <img src="SYMBOLS/return.png" width="70" height="70">
+                        </a>
+                      <br/>
+                    </div>
+                  </div>
+      </div>
+
+      <div id="TMEQLIVES">
+        <div id="TMEQLIVES1"><img src="SYMBOLS/staron1.png" width="45" height="40"></div>
+        <div id="TMEQLIVES2"><img src="SYMBOLS/staron2.png" width="45" height="40"></div>
+        <div id="TMEQLIVES3"><img src="SYMBOLS/staron3.png" width="45" height="40"></div>
+        <div id="TMEQLIVES4"><img src="SYMBOLS/staron4.png" width="45" height="40"></div>
+        <div id="TMEQLIVES5"><img src="SYMBOLS/staron5.png" width="45" height="40"></div>
+    </div>
+
+    <div class="box" id="TMEQ1">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMEQ(); VOICEPAUSETMEQ1();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionEasy();" width="60" height="60">
+        </div> 
+      <div class="center"> 
+          <p style="color: #f7f7f7;padding-top: 15%;font-size: 25px;">
+          <img id="soundonoffTMEQ1" onclick="VOICEPLAYTMEQ1();" src="SYMBOLS/mute.png" width="40" height="40">
+          Instructions: <label style="padding: 0 5px;border: 2px solid #a4ff76;border-radius: 10px;">Box</label> the animals that describe<br>
+          the pictures below. (one possible answer)
+          </p>    
+      <img src="PICTURES/TM/EQ1.png" style="width: 20%;">  
+          <p>
+            <button id="id194" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id194').style.textDecoration = 'none';">The</button>&nbsp;
+            <button id="id195" class="hover-underline-animation3" type="button" onclick="document.getElementById('id195').style.border = '2px solid #a4ff76'; style.padding = '0 5px'; style.borderRadius = '10px'; myVar = setTimeout(myFunctionTMEQ2, 2000); myVar = setTimeout(VOICEPLAYTMEQ2BACK, 2500); VOICEPAUSETMEQ1(); correct(); TURTLE();">turtle</button>&nbsp;
+            <button id="id196" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id196').style.textDecoration = 'none';">wanted</button>&nbsp;
+            <button id="id197" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id197').style.textDecoration = 'none';">the</button>&nbsp;
+            <button id="id198" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id198').style.textDecoration = 'none';">bottom</button>&nbsp;
+            <button id="id199" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id199').style.textDecoration = 'none';">part</button>&nbsp;
+            <button id="id200" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id200').style.textDecoration = 'none';">of</button>&nbsp;
+          </p>
+          <p>
+            <button id="id201" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id201').style.textDecoration = 'none';">the</button>&nbsp;
+            <button id="id202" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id202').style.textDecoration = 'none';">banana</button>&nbsp;
+            <button id="id203" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id203').style.textDecoration = 'none';">tree.</button>&nbsp;
+          </p>
+      </div>
+    </div>
+
+    <div class="box" id="TMEQ2">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMEQ(); VOICEPAUSETMEQ2();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionEasy();" width="60" height="60">
+        </div> 
+      <br>
+
+      <div class="center" style="padding: 25.8% 0;text-align: center;">
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+              <td style="width: 20%;">         
+                <div id="PREV">
+                  <img src="SYMBOLS/prev.png" onclick="myFunctionTMEQ1(); VOICEPAUSETMEQ2(); myFunctionCLEARTMEQ(); VOICEPLAYTMEQ1BACK();" width="70" height="70"></a>
+                </div>
+              </td>
+              <td style="width: 60%;">&nbsp;</td>
+              <td style="width: 20%;">
+                &nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="center" style="margin-top: -60%;"> 
+        <p style="color: #f7f7f7;padding-top: 16.8%;font-size: 25px;">
+          <img id="soundonoffTMEQ2" onclick="VOICEPLAYTMEQ2();" src="SYMBOLS/mute.png" width="40" height="40">
+          Instructions: <label style="padding: 0 5px;border: 2px solid #a4ff76;border-radius: 10px;">Box</label> the animals that describe<br>
+          the pictures below. (one possible answer)
+          </p>   
+        <img src="PICTURES/TM/EQ2.png" style="width: 20%;">
+        <p>
+          <button id="id204" class="hover-underline-animation3" type="button" onclick="document.getElementById('id204').style.textDecoration = 'none'; wrongTMEQ();">The</button>&nbsp;
+          <button id="id205" class="hover-underline-animation3" type="button" onclick="document.getElementById('id205').style.border = '2px solid #a4ff76'; style.padding = '0 5px'; style.borderRadius = '10px';  style.borderRadius = '10px'; myVar = setTimeout(myFunctionTMEQ3, 2500); myVar = setTimeout(VOICEPLAYTMEQ3BACK, 2500); correct(); MONKEY(); VOICEPAUSETMEQ2();">monkey</button>&nbsp;
+          <button id="id206" class="hover-underline-animation3" type="button" onclick="document.getElementById('id206').style.textDecoration = 'none'; wrongTMEQ();">wanted</button>&nbsp;
+          <button id="id207" class="hover-underline-animation3" type="button" onclick="document.getElementById('id207').style.textDecoration = 'none'; wrongTMEQ();">to</button>&nbsp;
+          <button id="id208" class="hover-underline-animation3" type="button" onclick="document.getElementById('id208').style.textDecoration = 'none'; wrongTMEQ();">take</button>&nbsp;
+          <button id="id209" class="hover-underline-animation3" type="button" onclick="document.getElementById('id209').style.textDecoration = 'none'; wrongTMEQ();">the</button>&nbsp;
+          <button id="id210" class="hover-underline-animation3" type="button" onclick="document.getElementById('id210').style.textDecoration = 'none'; wrongTMEQ();">top</button>&nbsp;
+        </p>
+        <p>
+          <button id="id211" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id211').style.textDecoration = 'none';">part</button>&nbsp;
+          <button id="id212" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id212').style.textDecoration = 'none';">of</button>&nbsp;
+          <button id="id213" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id213').style.textDecoration = 'none';">the</button>&nbsp;
+          <button id="id214" class="hover-underline-animation3" type="button" onclick=" wrongTMEQ(); document.getElementById('id214').style.textDecoration = 'none';">tree.</button>&nbsp;
+        </p>
+        </div> 
+    </div>
+
+    <div class="box" id="TMEQ3">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMEQ(); VOICEPAUSETMEQ3();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionEasy();" width="60" height="60">
+        </div> 
+      <br>
+
+      <div class="center" style="padding: 25.8% 0;;text-align: center;">
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+              <td style="width: 20%;">         
+                <div id="PREV">
+                  <img src="SYMBOLS/prev.png"  onclick="myFunctionTMEQ2(); myFunctionCLEARTMEQ(); VOICEPAUSETMEQ3(); VOICEPLAYTMEQ2BACK();" width="70" height="70">
+                </div>
+              </td>
+              <td style="width: 60%;">&nbsp;</td>
+              <td style="width: 20%;">
+                &nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="center" style="margin-top: -60%;"> 
+        <p style="color: #f7f7f7;padding-top: 16.8%;font-size: 25px;">
+        <img id="soundonoffTMEQ3" onclick="VOICEPLAYTMEQ3();" src="SYMBOLS/mute.png" width="40" height="40">
+        Instructions: <label style="padding: 0 5px;border: 2px solid #a4ff76;border-radius: 10px;">Box</label> the animals that describe<br> 
+        the pictures below. (two possible answers)
+      </p>        
+           <img src="PICTURES/TM/EQ3.png" style="width: 40%;">
+          <p>
+            <button id="id215" class="hover-underline-animation3" type="button" onclick="document.getElementById('id215').style.textDecoration = 'none'; wrongTMEQ();">The</button>&nbsp;
+            <button id="id216" class="hover-underline-animation3" type="button" onclick="document.getElementById('id216').style.border = '2px solid #a4ff76'; style.padding = '0 5px'; style.borderRadius = '10px'; VOICEPAUSETMEQ3(); correct(); MONKEY();">monkey</button>&nbsp;
+            <button id="id217" class="hover-underline-animation3" type="button" onclick="document.getElementById('id217').style.textDecoration = 'none'; wrongTMEQ();">mocks</button>&nbsp;
+            <button id="id218" class="hover-underline-animation3" type="button" onclick="document.getElementById('id218').style.textDecoration = 'none'; wrongTMEQ();">the</button>&nbsp;
+            <button id="id219" class="hover-underline-animation3" type="button" onclick="document.getElementById('id219').style.border = '2px solid #a4ff76'; style.padding = '0 5px'; style.borderRadius = '10px'; myVar = setTimeout(myFunctionTMEQSCORE, 2500); TURTLE(); correct(); TMEQcorrect(); VOICEPAUSETMEQ3();">turtle</button>&nbsp;            
+            <button id="id220" class="hover-underline-animation3" type="button" onclick="document.getElementById('id220').style.textDecoration = 'none'; wrongTMEQ();">for</button>&nbsp;
+            <button id="id221" class="hover-underline-animation3" type="button" onclick="document.getElementById('id221').style.textDecoration = 'none'; wrongTMEQ();">his</button>&nbsp;
+          </p>
+          <p>
+            <button id="id222" class="hover-underline-animation3" type="button" onclick="document.getElementById('id222').style.textDecoration = 'none'; wrongTMEQ();">chosen</button>&nbsp;
+            <button id="id223" class="hover-underline-animation3" type="button" onclick="document.getElementById('id223').style.textDecoration = 'none'; wrongTMEQ();">tree</button>&nbsp;
+            <button id="id224" class="hover-underline-animation3" type="button" onclick="document.getElementById('id224').style.textDecoration = 'none'; wrongTMEQ();">part.</button>&nbsp;
+          </p>
+    </div>
+    </div>
+
+    <div class="box" id="TMESGAMEOVER">      
+      <div class="center" style="padding: 8% 0;text-align: center;">
+        <h1 style="color: #ffffff;font-size: 5rem;;letter-spacing: 14px;"><img onclick="VOICEGAMEOVERPLAYTME();"  id="soundonoffGameOVERTME" src="SYMBOLS/soundonbutton.png" width="100" height="100">
+          GAME OVER</h1>
+          <div>
+            <img src="SYMBOLS/staroff1.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff2.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff3.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff4.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff5.png" width="130px" height="120px">
+           </div>
+          <h2 style="color: #f7afa8;font-size: 2.5rem;">Oh no! You have used all your lives.<br/>
+          Don't worry, you can always try again!</h2>    
+          <button class="buttonLater" onclick="Later(); myFunctionCLEARTMEQ(); VOICEGAMEOVERBACKTME(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myVar = setTimeout(myFunctionStories, 1000); TMEQANSWERRESET(); TMSTOPAUDIO();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="VOICEGAMEOVERBACKTME(); playagain(); myFunctionCLEARTMEQ(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myVar = setTimeout(myFunctionTMEQ1, 2000); myVar = setTimeout(VOICEPLAYTMEQ1BACK, 2800); VOICEGAMEOVERPAUSE(); TMEQANSWERRESET(); TMSTOPAUDIO();">Play again</button>       
+      </div>
+    </div>
+
+    <div class="box" id="TMESCORE">
+      <div class="center" style="padding: 3% 0;text-align: center;">
+        <br/>
+        <h4><label id="TMEQYAY" style="color: #ffffff;font-size: 4.5rem; font-weight: 300;"></label>&nbsp;
+          <label id="TMEQYOUDIDIT" style="color: #182523;font-size: 4.5rem; font-weight: 300;"><br/><br/></label>     
+         </h4>
+         <div id="TMEQLIVESON1"><img src="SYMBOLS/staron1.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESON2"><img src="SYMBOLS/staron2.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESON3"><img src="SYMBOLS/staron3.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESON4"><img src="SYMBOLS/staron4.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESON5"><img src="SYMBOLS/staron5.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESOFF1"><img src="SYMBOLS/staroff1.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESOFF2"><img src="SYMBOLS/staroff2.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESOFF3"><img src="SYMBOLS/staroff3.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESOFF4"><img src="SYMBOLS/staroff4.png" width="150px" height="140px"></div>
+         <div id="TMEQLIVESOFF5"><img src="SYMBOLS/staroff5.png" width="150px" height="140px"></div>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+          <h4 id="TMEQOOPS" style="color: #182523;font-size: 2.4rem; font-weight: 300;"></h4>   
+         
+          <button class="buttonLater" onclick="Later(); TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionStories, 1000); myFunctionCLEARTMEQ(); TMEQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); TMSTOPAUDIO();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="proceedalone(); TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionTMMQ1, 1000); myVar = setTimeout(VOICEPLAYTMMQ1, 2500); myFunctionCLEARTMMQ(); myFunctionCLEARTMEQ(); TMEQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); TMSTOPAUDIO();">Proceed</button>    
+        
+    </div>
+    </div>
+
+      <div id="TMMQLIVES">
+        <div id="TMMQLIVES1"><img src="SYMBOLS/staron1.png" width="45" height="40"></div>
+        <div id="TMMQLIVES2"><img src="SYMBOLS/staron2.png" width="45" height="40"></div>
+        <div id="TMMQLIVES3"><img src="SYMBOLS/staron3.png" width="45" height="40"></div>
+        <div id="TMMQLIVES4"><img src="SYMBOLS/staron4.png" width="45" height="40"></div>
+        <div id="TMMQLIVES5"><img src="SYMBOLS/staron5.png" width="45" height="40"></div>
+    </div>
+    
+    <div class="box" id="TMMQ1">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMEQ(); VOICEPAUSETMMQ1();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionMeduim();" width="60" height="60">
+        </div> 
+                <div class="center"> 
+                  <p style="color: #1f3d57;padding-top: 15%;font-size: 25px;">
+                    <img id="soundonoffTMMQ1" onclick="VOICEPLAYTMMQ1();" src="SYMBOLS/mute.png" width="40" height="40">
+                      Instructions: <label style="text-decoration: underline;">Underline</label> the words that best describe<br>
+                      the pictures shown below. (two possible answers)
+                  </p>       
+                  <img src="PICTURES/TM/MQ1PT1.gif" style="width:18%;">
+                  <img src="PICTURES/TM/MQ1PT2.png" style="width: 25%;">
+              <p>
+                <button id="id225" class="hover-underline-animation1" type="button" onclick="document.getElementById('id225').style.textDecoration = 'none'; wrongTMMQ();">The</button>&nbsp;
+                <button id="id226" class="hover-underline-animation1" type="button" onclick="document.getElementById('id226').style.textDecoration = 'none'; wrongTMMQ();">monkey</button>&nbsp;
+                <button id="id227" class="hover-underline-animation1" type="button" onclick="document.getElementById('id227').style.textDecoration = 'underline'; FELLDOWN(); correct(); VOICEPAUSETMMQ1();">fell down</button>&nbsp;
+                <button id="id229" class="hover-underline-animation1" type="button" onclick="document.getElementById('id229').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                <button id="id230" class="hover-underline-animation1" type="button" onclick="document.getElementById('id230').style.textDecoration = 'none'; wrongTMMQ();">tree</button>&nbsp;
+                <button id="id231" class="hover-underline-animation1" type="button" onclick="document.getElementById('id231').style.textDecoration = 'none'; wrongTMMQ();">and</button>&nbsp;
+                <button id="id232" class="hover-underline-animation1" type="button" onclick="document.getElementById('id232').style.textDecoration = 'none'; wrongTMMQ();">was</button>&nbsp;        
+                        </p>
+                            <p>
+                <button id="id233" class="hover-underline-animation1" type="button" onclick="document.getElementById('id233').style.textDecoration = 'none'; wrongTMMQ();">hurt</button>&nbsp;
+                <button id="id234" class="hover-underline-animation1" type="button" onclick="document.getElementById('id234').style.textDecoration = 'none'; wrongTMMQ();">by</button>&nbsp;
+                <button id="id235" class="hover-underline-animation1" type="button" onclick="document.getElementById('id235').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                <button id="id236" class="hover-underline-animation1" type="button" onclick="document.getElementById('id236').style.textDecoration = 'Underline'; myVar = setTimeout(myFunctionTMMQ2, 2000); myVar = setTimeout(VOICEPLAYTMMQ2BACK, 2500); VOICEPAUSETMMQ1(); THORNS(); correct();">thorns.</button>&nbsp;
+                    </p>
+                    </div>
+    </div>
+
+    <div class="box" id="TMMQ2">
+            <div id="DSMenu"> 
+              <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); TMSTOPAUDIO(); myFunctionCLEARTMMQ(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); VOICEPAUSETMMQ2();" width="60" height="60"><br/>
+              <img src="SYMBOLS/infobutton.png" onclick="InstructionMeduim();" width="60" height="60">
+              </div> 
+
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">         
+                        <div id="PREV">
+                          <img src="SYMBOLS/prev.png" onclick=" myFunctionCLEARTMMQ(); myFunctionTMMQ1(); VOICEPAUSETMMQ2(); VOICEPLAYTMMQ1BACK();"  width="70" height="70"></a>
+                        </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="center" style="margin-top: -60%;"> 
+                    <p style="color: #1f3d57;padding-top: 18.6%;font-size: 25px;">
+                      <img id="soundonoffTMMQ2" onclick="VOICEPLAYTMMQ2();" src="SYMBOLS/mute.png" width="40" height="40">
+                        Instructions: <label style="text-decoration: underline;">Underline</label> the words that best describe<br>
+                        the pictures shown below. (two possible answers)
+                    </p>          
+                  <img src="PICTURES/TM/MQ2.png" style="width: 35%;">
+                <p>
+                <button id="id237" class="hover-underline-animation1" type="button" onclick="document.getElementById('id237').style.textDecoration = 'none'; wrongTMMQ();">The</button>&nbsp;
+                <button id="id238" class="hover-underline-animation1" type="button" onclick="document.getElementById('id238').style.textDecoration = 'none'; wrongTMMQ();">turtle</button>&nbsp;
+                <button id="id239" class="hover-underline-animation1" type="button" onclick="document.getElementById('id239').style.textDecoration = 'none'; wrongTMMQ();">gladly</button>&nbsp;
+                <button id="id240" class="hover-underline-animation1" type="button" onclick="document.getElementById('id240').style.textDecoration = 'none'; wrongTMMQ();">came</button>&nbsp;
+                <button id="id241" class="hover-underline-animation1" type="button" onclick="document.getElementById('id241').style.textDecoration = 'none'; wrongTMMQ();">up</button>&nbsp;
+                <button id="id242" class="hover-underline-animation1" type="button" onclick="document.getElementById('id242').style.textDecoration = 'none'; wrongTMMQ();">to</button>&nbsp;
+                <button id="id243" class="hover-underline-animation1" type="button" onclick="document.getElementById('id243').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                
+                </p>
+                <p>
+                <button id="id244" class="hover-underline-animation1" type="button" onclick="document.getElementById('id244').style.textDecoration = 'none'; wrongTMMQ();">surface</button>&nbsp;    
+                <button id="id245" class="hover-underline-animation1" type="button" onclick="document.getElementById('id245').style.textDecoration = 'none'; wrongTMMQ();">of</button>&nbsp;
+                <button id="id246" class="hover-underline-animation1" type="button" onclick="document.getElementById('id246').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                <button id="id247" class="hover-underline-animation1" type="button" onclick="document.getElementById('id247').style.textDecoration = 'Underline'; correct(); WATER(); VOICEPAUSETMMQ2();">water</button>&nbsp;
+                <button id="id248" class="hover-underline-animation1" type="button" onclick="document.getElementById('id248').style.textDecoration = 'none'; wrongTMMQ();">and</button>&nbsp;
+                <button id="id249" class="hover-underline-animation1" type="button" onclick="document.getElementById('id249').style.textDecoration = 'Underline'; myVar = setTimeout(myFunctionTMMQ3, 3000); myVar = setTimeout(VOICEPLAYTMMQ3BACK, 2500); LAUGHED(); correct(); VOICEPAUSETMMQ2();">laughed</button>&nbsp;
+                <button id="id250" class="hover-underline-animation1" type="button" onclick="document.getElementById('id250').style.textDecoration = 'none'; wrongTMMQ();">at</button>&nbsp;
+                <button id="id251" class="hover-underline-animation1" type="button" onclick="document.getElementById('id251').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;          
+                <button id="id252" class="hover-underline-animation1" type="button" onclick="document.getElementById('id252').style.textDecoration = 'none'; wrongTMMQ();">monkey.</button>&nbsp; 
+                </p>          
+                </div>
+    </div>
+   
+    <div class="box" id="TMMQ3">
+        <div id="DSMenu"> 
+          <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); TMSTOPAUDIO(); myFunctionTMMode(); CHOOSEDS(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMMQ(); VOICEPAUSETMMQ3();" width="60" height="60"><br/>
+          <img src="SYMBOLS/infobutton.png" onclick="InstructionMeduim();" width="60" height="60">
+          </div> 
+
+          <div class="center" style="padding: 25.8% 0;;text-align: center;">
+            <table style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td style="width: 20%;">         
+                    <div id="PREV">
+                      <img src="SYMBOLS/prev.png" onclick=" myFunctionCLEARTMMQ(); myFunctionTMMQ2(); VOICEPAUSETMMQ3(); VOICEPLAYTMMQ2BACK();"  width="70" height="70"></a>
+                    </div>
+                  </td>
+                  <td style="width: 60%;">&nbsp;</td>
+                  <td style="width: 20%;">
+                    &nbsp;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="center" style="margin-top: -60%;"> 
+                <p style="color: #1f3d57;padding-top: 18.6%;font-size: 25px;">
+                  <img id="soundonoffTMMQ3" onclick="VOICEPLAYTMMQ3();" src="SYMBOLS/mute.png" width="40" height="40">
+                    Instructions: <label style="text-decoration: underline;">Underline</label> the words that best describe<br>
+                    the pictures shown below. (three possible answers)
+                </p>           
+              <img src="PICTURES/TM/MQ3.png" style="width: 45%;">
+            <p>
+                  <button id="id253" class="hover-underline-animation1" type="button" onclick="document.getElementById('id253').style.textDecoration = 'none'; wrongTMMQ();">The</button>&nbsp;
+                  <button id="id254" class="hover-underline-animation1" type="button" onclick="document.getElementById('id254').style.textDecoration = 'none'; wrongTMMQ();">turtle</button>&nbsp;
+                  <button id="id255" class="hover-underline-animation1" type="button" onclick="document.getElementById('id255').style.textDecoration = 'none'; wrongTMMQ();">was</button>&nbsp;
+                  <button id="id256" class="hover-underline-animation1" type="button" onclick="document.getElementById('id256').style.textDecoration = 'none'; wrongTMMQ();">told</button>&nbsp;
+                  <button id="id257" class="hover-underline-animation1" type="button" onclick="document.getElementById('id257').style.textDecoration = 'none'; wrongTMMQ();">to</button>&nbsp;
+                  <button id="id258" class="hover-underline-animation1" type="button" onclick="document.getElementById('id258').style.textDecoration = 'Underline'; correct(); DROWN(); VOICEPAUSETMMQ3();">drown</button>&nbsp;
+                  <button id="id259" class="hover-underline-animation1" type="button" onclick="document.getElementById('id259').style.textDecoration = 'none'; wrongTMMQ();">in</button>&nbsp;
+                  <button id="id260" class="hover-underline-animation1" type="button" onclick="document.getElementById('id260').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                  <button id="id261" class="hover-underline-animation1" type="button" onclick="document.getElementById('id261').style.textDecoration = 'none'; wrongTMMQ();">river</button>&nbsp;
+                  </p>
+                  <p>
+                  <button id="id262" class="hover-underline-animation1" type="button" onclick="document.getElementById('id262').style.textDecoration = 'none'; wrongTMMQ();">or</button>&nbsp;
+                  <button id="id263" class="hover-underline-animation1" type="button" onclick="document.getElementById('id263').style.textDecoration = 'none'; wrongTMMQ();">get</button>&nbsp;
+                  <button id="id264" class="hover-underline-animation1" type="button" onclick="document.getElementById('id264').style.textDecoration = 'none'; wrongTMMQ();">thrown</button>&nbsp;
+                  <button id="id265" class="hover-underline-animation1" type="button" onclick="document.getElementById('id265').style.textDecoration = 'none'; wrongTMMQ();">into</button>&nbsp;
+                  <button id="id266" class="hover-underline-animation1" type="button" onclick="document.getElementById('id266').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                  <button id="id267" class="hover-underline-animation1" type="button" onclick="document.getElementById('id267').style.textDecoration = 'Underline'; FIRE(); correct(); VOICEPAUSETMMQ3();">fire.</button>&nbsp;
+                  <button id="id268" class="hover-underline-animation1" type="button" onclick="document.getElementById('id268').style.textDecoration = 'none'; wrongTMMQ();">The</button>&nbsp;
+                   </p>
+                  <p>
+                  <button id="id269" class="hover-underline-animation1" type="button" onclick="document.getElementById('id269').style.textDecoration = 'none'; wrongTMMQ();">turtle</button>&nbsp;
+                  <button id="id270" class="hover-underline-animation1" type="button" onclick="document.getElementById('id270').style.textDecoration = 'none'; wrongTMMQ();">chose</button>&nbsp;
+                  <button id="id271" class="hover-underline-animation1" type="button" onclick="document.getElementById('id271').style.textDecoration = 'none'; wrongTMMQ();">the</button>&nbsp;
+                  <button id="id272" class="hover-underline-animation1" type="button" onclick="document.getElementById('id272').style.textDecoration = 'none'; wrongTMMQ();">latter</button>&nbsp;                        
+         
+                  <button id="id273" class="hover-underline-animation1" type="button" onclick="document.getElementById('id273').style.textDecoration = 'none'; wrongTMMQ();">since</button>&nbsp;
+                  <button id="id274" class="hover-underline-animation1" type="button" onclick="document.getElementById('id274').style.textDecoration = 'none'; wrongTMMQ();">he</button>&nbsp;
+                  <button id="id275" class="hover-underline-animation1" type="button" onclick="document.getElementById('id275').style.textDecoration = 'none'; wrongTMMQ();">could</button>&nbsp;
+                  <button id="id276" class="hover-underline-animation1" type="button" onclick="document.getElementById('id276').style.textDecoration = 'none'; wrongTMMQ();">not</button>&nbsp;
+                  <button id="id277" class="hover-underline-animation1" type="button" onclick="document.getElementById('id277').style.textDecoration = 'Underline'; myVar = setTimeout(myFunctionTMMQSCORE, 2500); VOICEPAUSETMMQ3(); SWIM(); correct(); TMMQcorrect();VOICEPAUSETMMQ">swim.</button>&nbsp;
+          </p>
+        </div>
+    </div>    
+
+    <div class="box" id="TMMSGAMEOVER">
+      <div class="center" style="padding: 3% 0;text-align: center;">
+  
+        <h1 style="color: #ffffff;font-size: 5rem;;letter-spacing: 14px;"> <img onclick="VOICEGAMEOVERPLAYTMM();" id="TMsoundonoffGameOVERTMM" src="SYMBOLS/soundonbutton.png" width="100" height="100">
+          GAME OVER</h1>
+          <div>
+            <img src="SYMBOLS/staroff1.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff2.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff3.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff4.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff5.png" width="130px" height="120px">
+           </div>
+          <h4 style="color: #f7afa8;font-size: 2.5rem;">Oh no! You have used all your lives.<br/>
+          Don't worry, you can always try again!</h4>    
+          <button class="buttonLater" onclick="Later(); VOICEGAMEOVERBACKTMM(); myVar = setTimeout(myFunctionStories, 1000); myFunctionCLEARTMMQ(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); TMMQANSWERRESET(); TMSTOPAUDIO();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="VOICEGAMEOVERBACKTMM(); playagain(); myVar = setTimeout(myFunctionTMMQ1, 2000); myVar = setTimeout(VOICEPLAYTMMQ1BACK, 2800); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMMQ(); TMMQANSWERRESET(); TMSTOPAUDIO();">Play again</button>       
+      </div>
+    </div>
+
+    <div class="box" id="TMMSCORE">
+        <div class="center" style="padding: 3% 0;text-align: center;">
+        <br/>
+        <h4><label id="TMMQYAY" style="color: #ffffff;font-size: 4.5rem; font-weight: 300;"></label>&nbsp;
+          <label id="TMMQYOUDIDIT" style="color: #182523; font-size: 4.5rem; font-weight: 300;"><br/><br/></label>     
+         </h4>
+         <div id="TMMQLIVESON1"><img src="SYMBOLS/staron1.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESON2"><img src="SYMBOLS/staron2.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESON3"><img src="SYMBOLS/staron3.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESON4"><img src="SYMBOLS/staron4.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESON5"><img src="SYMBOLS/staron5.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESOFF1"><img src="SYMBOLS/staroff1.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESOFF2"><img src="SYMBOLS/staroff2.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESOFF3"><img src="SYMBOLS/staroff3.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESOFF4"><img src="SYMBOLS/staroff4.png" width="150px" height="140px"></div>
+         <div id="TMMQLIVESOFF5"><img src="SYMBOLS/staroff5.png" width="150px" height="140px"></div>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+          <h4 id="TMMQOOPS" style="color: #182523;font-size: 2.4rem; font-weight: 300;"></h4>   
+
+          <button class="buttonLater" onclick="Later();TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionStories, 1000); myFunctionCLEARTMMQ(); TMMQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="proceedalone(); TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionTMHQ1, 1000); myVar = setTimeout(VOICEPLAYTMHQ1, 2500); myFunctionCLEARTMMQ(); TMMQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ();">Proceed</button>    
+        </div>
+    </div>
+
+    <div id="TMHQLIVES">
+      <div id="TMHQLIVES1"><img src="SYMBOLS/staron1.png" width="45" height="40"></div>
+      <div id="TMHQLIVES2"><img src="SYMBOLS/staron2.png" width="45" height="40"></div>
+      <div id="TMHQLIVES3"><img src="SYMBOLS/staron3.png" width="45" height="40"></div>
+      <div id="TMHQLIVES4"><img src="SYMBOLS/staron4.png" width="45" height="40"></div>
+      <div id="TMHQLIVES5"><img src="SYMBOLS/staron5.png" width="45" height="40"></div>
+    </div>
+    
+    <div class="box" id="TMHQ1">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="myFunctionTMMode(); CHOOSETM(); VOICEPAUSETMHQ1(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMHQ();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionHard();" width="60" height="60">
+        </div> 
+ 
+              <div class="center"> 
+                <p style="color: #ffffff;padding-top: 15%;font-size: 25px;">
+                  <img id="soundonoffTMHQ1" onclick="VOICEPLAYTMHQ1();" src="SYMBOLS/mute.png" width="40" height="40">
+                  Instructions: <label style="padding: 3px 7px;border-radius: 10px;background-color: #153f34;">Highlight</label> the words that describe<br>
+                  the pictures below. (three possible answers)
+                </p> 
+                <img src="PICTURES/TM/HQ1.png" style="width: 40%;">      
+                          <p>
+                          <button id="id290" class="hover-underline-animation3" type="button" onclick="document.getElementById('id290').style.textDecoration = 'none'; wrongTMHQ();">One</button>&nbsp;
+                          <button id="id291" class="hover-underline-animation3" type="button" onclick="document.getElementById('id291').style.textDecoration = 'none'; wrongTMHQ();">day,</button>&nbsp;
+                          <button id="id292" class="hover-underline-animation3" type="button" onclick="document.getElementById('id292').style.textDecoration = 'none'; wrongTMHQ();">a</button>&nbsp;
+                          <button id="id293" class="hover-underline-animation3" type="button" onclick="document.getElementById('id293').style.textDecoration = 'none'; wrongTMHQ();">monkey</button>&nbsp;
+                          <button id="id294" class="hover-underline-animation3" type="button" onclick="document.getElementById('id294').style.textDecoration = 'none'; wrongTMHQ();">and</button>&nbsp;
+                          <button id="id295" class="hover-underline-animation3" type="button" onclick="document.getElementById('id295').style.textDecoration = 'none'; wrongTMHQ();">a</button>&nbsp;
+                          <button id="id296" class="hover-underline-animation3" type="button" onclick="document.getElementById('id296').style.textDecoration = 'none'; wrongTMHQ();">turtle</button>&nbsp;
+                          <button id="id297" class="hover-underline-animation3" type="button" onclick="document.getElementById('id297').style.textDecoration = 'none'; wrongTMHQ();">were</button>&nbsp;
+                          <button id="id298" class="hover-underline-animation3" type="button" onclick="document.getElementById('id298').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; HUNGRY(); correct(); VOICEPAUSETMHQ1();">hungry</button>&nbsp;
+                          <button id="id299" class="hover-underline-animation3" type="button" onclick="document.getElementById('id299').style.textDecoration = 'none'; wrongTMHQ();">and</button>&nbsp;
+                          </p>
+                          <p>                 
+                          <button id="id300" class="hover-underline-animation3" type="button" onclick="document.getElementById('id300').style.textDecoration = 'none'; wrongTMHQ();">saw</button>&nbsp;
+                          <button id="id301" class="hover-underline-animation3" type="button" onclick="document.getElementById('id301').style.textDecoration = 'none'; wrongTMHQ();">a</button>&nbsp;
+                          <button id="id302" class="hover-underline-animation3" type="button" onclick="document.getElementById('id302').style.textDecoration = 'none'; wrongTMHQ();">banana</button>&nbsp;
+                          <button id="id303" class="hover-underline-animation3" type="button" onclick="document.getElementById('id303').style.textDecoration = 'none'; wrongTMHQ();">tree</button>&nbsp;
+                          <button id="id304" class="hover-underline-animation3" type="button" onclick="document.getElementById('id304').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; FLOATING(); correct(); VOICEPAUSETMHQ1();">floating</button>&nbsp;
+                          <button id="id305" class="hover-underline-animation3" type="button" onclick="document.getElementById('id305').style.textDecoration = 'none'; wrongTMHQ();">in</button>&nbsp;
+                          <button id="id306" class="hover-underline-animation3" type="button" onclick="document.getElementById('id306').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                          <button id="id307" class="hover-underline-animation3" type="button" onclick="document.getElementById('id307').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; myVar = setTimeout(myFunctionTMHQ2, 2000); myVar = setTimeout(VOICEPLAYTMHQ2BACK, 2500); RIVER(); correct(); VOICEPAUSETMHQ1();">river.</button>&nbsp;
+                          <button id="id308" class="hover-underline-animation3" type="button" onclick="document.getElementById('id308').style.textDecoration = 'none'; wrongTMHQ();">They</button>&nbsp;
+                          </p>
+                          <p>
+                          <button id="id309" class="hover-underline-animation3" type="button" onclick="document.getElementById('id309').style.textDecoration = 'none'; wrongTMHQ();">decided</button>&nbsp;
+                          <button id="id310" class="hover-underline-animation3" type="button" onclick="document.getElementById('id310').style.textDecoration = 'none'; wrongTMHQ();">to</button>&nbsp;
+                          <button id="id311" class="hover-underline-animation3" type="button" onclick="document.getElementById('id311').style.textDecoration = 'none'; wrongTMHQ();">take</button>&nbsp;                              
+                          <button id="id312" class="hover-underline-animation3" type="button" onclick="document.getElementById('id312').style.textDecoration = 'none'; wrongTMHQ();">it</button>&nbsp;
+                          <button id="id313" class="hover-underline-animation3" type="button" onclick="document.getElementById('id313').style.textDecoration = 'none'; wrongTMHQ();">out</button>&nbsp;
+                          <button id="id314" class="hover-underline-animation3" type="button" onclick="document.getElementById('id314').style.textDecoration = 'none'; wrongTMHQ();">of</button>&nbsp;
+                          <button id="id315" class="hover-underline-animation3" type="button" onclick="document.getElementById('id315').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                          <button id="id316" class="hover-underline-animation3" type="button" onclick="document.getElementById('id316').style.textDecoration = 'none'; wrongTMHQ();">water.</button>&nbsp;
+                          </p>
+                </div>
+    </div>
+
+    <div class="box" id="TMHQ2">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMHQ(); VOICEPAUSETMHQ2();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionHard();" width="60" height="60">
+        </div> 
+
+
+        <div class="center" style="padding: 25.8% 0;;text-align: center;">
+          <table style="width: 100%;">
+            <tbody>
+              <tr>
+                <td style="width: 20%;">         
+                  <div id="PREV">
+                    <img src="SYMBOLS/prev.png" onclick=" myFunctionCLEARTMHQ(); myFunctionTMHQ1(); VOICEPAUSETMHQ2(); VOICEPLAYTMHQ1BACK();" width="70" height="70"></a>
+                  </div>
+                </td>
+                <td style="width: 60%;">&nbsp;</td>
+                <td style="width: 20%;">
+                  &nbsp;
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="center" style="margin-top: -60%;"> 
+                           <p style="color: #ffffff;padding-top: 18.6%;font-size: 25px;">
+                           <img id="soundonoffTMHQ2" onclick="VOICEPLAYTMHQ2();" src="SYMBOLS/mute.png" width="40" height="40">  
+                           Instructions: <label style="padding: 3px 7px;border-radius: 10px;background-color: #153f34;">Highlight</label> the words that describe<br>
+                           the pictures below. (four possible answers)
+                          </p> 
+                                <img src="PICTURES/TM/HQ2.png" style="width: 45%;">     
+                              <p>      
+                              <button id="id317" class="hover-underline-animation3" type="button" onclick="document.getElementById('id317').style.textDecoration = 'none'; wrongTMHQ();">The</button>&nbsp;
+                              <button id="id318" class="hover-underline-animation3" type="button" onclick="document.getElementById('id318').style.textDecoration = 'none'; wrongTMHQ();">monkey</button>&nbsp;
+                              <button id="id319" class="hover-underline-animation3" type="button" onclick="document.getElementById('id319').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; CLIMBED(); correct(); VOICEPAUSETMHQ2();">climbed</button>&nbsp;
+                              <button id="id320" class="hover-underline-animation3" type="button" onclick="document.getElementById('id320').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                              <button id="id321" class="hover-underline-animation3" type="button" onclick="document.getElementById('id321').style.textDecoration = 'none'; wrongTMHQ();">turtle's</button>&nbsp; 
+                              <button id="id322" class="hover-underline-animation3" type="button" onclick="document.getElementById('id322').style.textDecoration = 'none'; wrongTMHQ();">tree</button>&nbsp;
+                              <button id="id323" class="hover-underline-animation3" type="button" onclick="document.getElementById('id323').style.textDecoration = 'none'; wrongTMHQ();">and</button>&nbsp;
+                              <button id="id324" class="hover-underline-animation3" type="button" onclick="document.getElementById('id324').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; ATE(); correct(); VOICEPAUSETMHQ2();">ate</button>&nbsp;   
+                                   </p>
+                              <p>
+                              <button id="id325" class="hover-underline-animation3" type="button" onclick="document.getElementById('id325').style.textDecoration = 'none'; wrongTMHQ();">some</button>&nbsp;
+                              <button id="id326" class="hover-underline-animation3" type="button" onclick="document.getElementById('id326').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; BANANAS(); correct(); VOICEPAUSETMHQ2();">bananas.</button>&nbsp;
+                              <button id="id327" class="hover-underline-animation3" type="button" onclick="document.getElementById('id327').style.textDecoration = 'none'; wrongTMHQ();">The</button>&nbsp;
+                              <button id="id328" class="hover-underline-animation3" type="button" onclick="document.getElementById('id328').style.textDecoration = 'none'; wrongTMHQ();">turtle</button>&nbsp;
+                              <button id="id329" class="hover-underline-animation3" type="button" onclick="document.getElementById('id329').style.textDecoration = 'none'; wrongTMHQ();">was</button>&nbsp;
+                              <button id="id330" class="hover-underline-animation3" type="button" onclick="document.getElementById('id330').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; myVar = setTimeout(myFunctionTMHQ3, 2000); myVar = setTimeout(VOICEPLAYTMHQ3BACK, 2500); ANGRY(); correct(); VOICEPAUSETMHQ2();">angry</button>&nbsp;
+                              <button id="id331" class="hover-underline-animation3" type="button" onclick="document.getElementById('id331').style.textDecoration = 'none'; wrongTMHQ();">and</button>&nbsp;
+                              <button id="id332" class="hover-underline-animation3" type="button" onclick="document.getElementById('id332').style.textDecoration = 'none'; wrongTMHQ();">yelled</button>&nbsp;
+                              </p>
+                              <p>
+                              <button id="id333" class="hover-underline-animation3" type="button" onclick="document.getElementById('id333').style.textDecoration = 'none'; wrongTMHQ();">at</button>&nbsp;
+                              <button id="id334" class="hover-underline-animation3" type="button" onclick="document.getElementById('id334').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                              <button id="id335" class="hover-underline-animation3" type="button" onclick="document.getElementById('id335').style.textDecoration = 'none'; wrongTMHQ();">monkey.</button>&nbsp;                                  
+                              <button id="id336" class="hover-underline-animation3" type="button" onclick="document.getElementById('id336').style.textDecoration = 'none'; wrongTMHQ();">He</button>&nbsp;
+                              <button id="id337" class="hover-underline-animation3" type="button" onclick="document.getElementById('id337').style.textDecoration = 'none'; wrongTMHQ();">decided</button>&nbsp;
+                              <button id="id338" class="hover-underline-animation3" type="button" onclick="document.getElementById('id338').style.textDecoration = 'none'; wrongTMHQ();">to</button>&nbsp;
+                              <button id="id339" class="hover-underline-animation3" type="button" onclick="document.getElementById('id339').style.textDecoration = 'none'; wrongTMHQ();">teach</button>&nbsp;
+                              <button id="id340" class="hover-underline-animation3" type="button" onclick="document.getElementById('id340').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                              <button id="id341" class="hover-underline-animation3" type="button" onclick="document.getElementById('id341').style.textDecoration = 'none'; wrongTMHQ();">monkey</button>&nbsp;
+                              <button id="id342" class="hover-underline-animation3" type="button" onclick="document.getElementById('id146').style.textDecoration = 'none'; wrongTMHQ();">a</button>&nbsp;
+                              <button id="id343" class="hover-underline-animation3" type="button" onclick="document.getElementById('id147').style.textDecoration = 'none'; wrongTMHQ();">lesson.</button>&nbsp;
+                              </p>
+
+        </div>
+    </div>
+
+    <div class="box" id="TMHQ3">
+      <div id="DSMenu"> 
+        <img src="SYMBOLS/menubutton.png" onclick="TMSTOPAUDIO(); myFunctionTMMode(); CHOOSETM(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMHQ(); VOICEPAUSETMHQ3();" width="60" height="60"><br/>
+        <img src="SYMBOLS/infobutton.png" onclick="InstructionHard();" width="60" height="60">
+        </div> 
+
+      <div class="center" style="padding: 25.8% 0;;text-align: center;">
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+              <td style="width: 20%;">         
+                <div id="PREV">
+                  <img src="SYMBOLS/prev.png" onclick=" myFunctionCLEARTMHQ(); myFunctionTMHQ2(); VOICEPAUSETMHQ3(); VOICEPLAYTMHQ2BACK();" width="70" height="70"></a>
+                </div>
+              </td>
+              <td style="width: 60%;">&nbsp;</td>
+              <td style="width: 20%;">
+                &nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+        <div class="center" style="margin-top: -60%;"> 
+                  <p style="color: #ffffff;padding-top: 18.6%;font-size: 25px;">
+                    <img id="soundonoffTMHQ3" onclick="VOICEPLAYTMHQ3();" src="SYMBOLS/mute.png" width="40" height="40">
+                    Instructions: <label style="padding: 3px 7px;border-radius: 10px;background-color: #153f34;">Highlight</label> the words that describe<br>
+                    the pictures below. (three possible answers)
+                  </p>
+                  <img src="PICTURES/TM/HQ3.png" style="width: 45%;">
+                  <p>
+                  <button id="id343" class="hover-underline-animation3" type="button" onclick="document.getElementById('id343').style.textDecoration = 'none'; wrongTMHQ();">As</button>&nbsp;
+                  <button id="id344" class="hover-underline-animation3" type="button" onclick="document.getElementById('id344').style.textDecoration = 'none'; wrongTMHQ();">for</button>&nbsp;
+                  <button id="id345" class="hover-underline-animation3" type="button" onclick="document.getElementById('id345').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                  <button id="id346" class="hover-underline-animation3" type="button" onclick="document.getElementById('id346').style.textDecoration = 'none'; wrongTMHQ();">banana</button>&nbsp;
+                  <button id="id347" class="hover-underline-animation3" type="button" onclick="document.getElementById('id347').style.textDecoration = 'none'; wrongTMHQ();">tree?</button>&nbsp;
+                  <button id="id349" class="hover-underline-animation3" type="button" onclick="document.getElementById('id349').style.textDecoration = 'none'; wrongTMHQ();">Well,</button>&nbsp;
+                  <button id="id350" class="hover-underline-animation3" type="button" onclick="document.getElementById('id350').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                  <button id="id351" class="hover-underline-animation3" type="button" onclick="document.getElementById('id351').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; WEEDS(); correct(); VOICEPAUSETMHQ3();">weeds</button>&nbsp;
+                  <button id="id352" class="hover-underline-animation3" type="button" onclick="document.getElementById('id352').style.textDecoration = 'none'; wrongTMHQ();">took</button>&nbsp;
+                  </p>
+                  <p>
+                  <button id="id353" class="hover-underline-animation3" type="button" onclick="document.getElementById('id353').style.textDecoration = 'none'; wrongTMHQ();">over</button>&nbsp;
+                  <button id="id354" class="hover-underline-animation3" type="button" onclick="document.getElementById('id354').style.textDecoration = 'none'; wrongTMHQ();">the</button>&nbsp;
+                  <button id="id355" class="hover-underline-animation3" type="button" onclick="document.getElementById('id355').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; TREE(); correct(); VOICEPAUSETMHQ3();">tree.</button>&nbsp;
+                  <button id="id356" class="hover-underline-animation3" type="button" onclick="document.getElementById('id356').style.textDecoration = 'none'; wrongTMHQ();">Since</button>&nbsp;
+                  <button id="id357" class="hover-underline-animation3" type="button" onclick="document.getElementById('id357').style.textDecoration = 'none'; wrongTMHQ();">that</button>&nbsp;
+                  <button id="id358" class="hover-underline-animation3" type="button" onclick="document.getElementById('id358').style.textDecoration = 'none'; wrongTMHQ();">day,</button>&nbsp;
+                  <button id="id359" class="hover-underline-animation3" type="button" onclick="document.getElementById('id359').style.textDecoration = 'none'; wrongTMHQ();">monkeys</button>&nbsp;
+                  <button id="id360" class="hover-underline-animation3" type="button" onclick="document.getElementById('id360').style.textDecoration = 'none'; wrongTMHQ();">and</button>&nbsp;
+                  </p>
+                  <p>
+                  <button id="id361" class="hover-underline-animation3" type="button" onclick="document.getElementById('id361').style.textDecoration = 'none'; wrongTMHQ();">turtles</button>&nbsp;
+                  <button id="id362" class="hover-underline-animation3" type="button" onclick="document.getElementById('id362').style.textDecoration = 'none'; wrongTMHQ();">have</button>&nbsp;
+                  <button id="id363" class="hover-underline-animation3" type="button" onclick="document.getElementById('id363').style.textDecoration = 'none'; wrongTMHQ();">been</button>&nbsp;  
+                  <button id="id364" class="hover-underline-animation3" type="button" onclick="document.getElementById('id364').style.textDecoration = 'none'; wrongTMHQ();">bitter</button>&nbsp;
+                  <button id="id365" class="hover-underline-animation3" type="button" onclick="document.getElementById('id365').style.padding = '0 5px'; style.borderRadius = '10px'; style.backgroundColor = '#153f34'; myVar = setTimeout(myFunctionTMHSCORE, 2500); ENEMIES(); correct(); TMHQcorrect(); VOICEPAUSETMHQ3();">enemies.</button>&nbsp;
+                  </p>
+      </div>
+    </div>
+
+    <div class="box" id="TMHSGAMEOVER">
+      <div class="center" style="padding: 3% 0;text-align: center;">
+
+        <h1 style="color: #ffffff;font-size: 5rem;;letter-spacing: 14px;"> <img onclick="VOICEGAMEOVERPLAYTMH();" id="TMsoundonoffGameOVERTMH" src="SYMBOLS/soundonbutton.png" width="100" height="100">
+          GAME OVER</h1>
+          <div>
+            <img src="SYMBOLS/staroff1.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff2.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff3.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff4.png" width="130px" height="120px">
+            <img src="SYMBOLS/staroff5.png" width="130px" height="120px">
+           </div>
+          <h4 style="color: #f7afa8;font-size: 2.5rem;">Oh no! You have used all your lives.<br/>
+          Don't worry, you can always try again!</h4>    
+          <button class="buttonLater" onclick="Later(); VOICEGAMEOVERBACKTMH(); myVar = setTimeout(myFunctionStories, 2000); myFunctionCLEARTMHQ(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); TMHQANSWERRESET();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="VOICEGAMEOVERBACKTMH(); myVar = setTimeout(VOICEPLAYTMHQ1BACK, 2800); playagain(); myVar = setTimeout(myFunctionTMHQ1, 2500); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); myFunctionCLEARTMHQ(); TMHQANSWERRESET();">Play again</button>       
+      </div>
+    </div>
+
+    <div class="box" id="TMHSCORE">
+      <div class="center" style="padding: 3% 0;text-align: center;">
+        <br/>     
+        <h4><label id="TMHQYAY" style="color: #ffffff;font-size: 4.5rem; font-weight: 300;"></label>&nbsp;
+          <label id="TMHQYOUDIDIT" style="color: #182523;font-size: 4.5rem; font-weight: 300;"><br/><br/></label>     
+         </h4>
+         <div id="TMHQLIVESON1"><img src="SYMBOLS/staron1.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESON2"><img src="SYMBOLS/staron2.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESON3"><img src="SYMBOLS/staron3.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESON4"><img src="SYMBOLS/staron4.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESON5"><img src="SYMBOLS/staron5.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESOFF1"><img src="SYMBOLS/staroff1.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESOFF2"><img src="SYMBOLS/staroff2.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESOFF3"><img src="SYMBOLS/staroff3.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESOFF4"><img src="SYMBOLS/staroff4.png" width="150px" height="140px"></div>
+         <div id="TMHQLIVESOFF5"><img src="SYMBOLS/staroff5.png" width="150px" height="140px"></div>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+          <h4 id="TMHQOOPS" style="color: #ffffff;font-size: 2.4rem; font-weight: 300;"></h4>
+
+          <button class="buttonLater" onclick="Later(); TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionStories, 1000); myFunctionCLEARTMHQ(); TMHQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); TMSTOPAUDIO();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="congratsyoudidwonderfulTM1(); proceedalone(); TMyayPause(); TMgreatPause(); TMfantasticPause(); myVar = setTimeout(myFunctionTMCONGRATS, 1000); myFunctionCLEARTMHQ(); TMHQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeStarTMHQ(); TMSTOPAUDIO();">Proceed</button>    
+        </div>
+    </div>
+
+    <div class="box" id="TMCONGRATS">
+      <div class="center" style="padding: 43% 0;text-align: center;">
+
+          <button class="buttonLater" onclick="Later(); congratsyoudidwonderfulTMSTOP1(); myVar = setTimeout(myFunctionStories, 1000); myFunctionCLEARTMHQ(); TMHQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); TMSTOPAUDIO();">Later</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="buttonLetsGo" onclick="playagain(); congratsyoudidwonderfulTMSTOP1(); myVar = setTimeout(myFunctionTMMode, 1000); myFunctionCLEARTMHQ(); TMHQANSWERRESET(); RechargeTMEQ(); RechargeTMMQ(); RechargeTMHQ(); RechargeStarTMEQ(); RechargeStarTMMQ(); RechargeStarTMHQ(); TMSTOPAUDIO();">Play again</button>    
+        </div>
+    </div>
+      
+</body>
+
+<audio id="TMstory12" src="GAMESSTORY/TM/AREYOUREADYTOHAVEFUN.mp3" type="audio/mp3"></audio>
+<audio id="PROCEED" src="GAMESSTORY/DS/proceed.mp3"></audio>
+<audio id="TMLaterIhaveToGo" src="GAMESSTORY/TM/LaterIhaveToGo.mp3" type="audio/mp3"></audio>
+<audio id="TMletsgo" src="GAMESSTORY/TM/LETSGO.mp3" type="audio/mp3"></audio>
+<audio id="TMConfirmation" src="GAMESSTORY/TM/CONFIRM.mp3" type="audio/mp3"></audio>
+<audio id="TMLater" src="GAMESSTORY/TM/LATER.mp3" type="audio/mp3"></audio>
+<audio id="TMGAMEOVER" src="GAMESSTORY/TM/gameover+ohno.mp3" type="audio/mp3"></audio>
+
+<audio id="CHOOSETM" src="voice/TM/CH.mp3" type="audio/mp3"></audio>
+<audio id="TMEASY" src="GAMESSTORY/TM/EASY.mp3">
+<audio id="TMMEDIUM" src="GAMESSTORY/TM/mediumprompt.mp3">
+<audio id="TMDIFFICULT" src="GAMESSTORY/TM/difficultprompt.mp3">
+
+<audio id="TMcorrect" src="GAMESSTORY/TM/correct.mp3"></audio>
+<audio id="TMwrong" src="GAMESSTORY/TM/wrong.mp3  "></audio>
+
+<audio id="TMEQinstructions" src="GAMESSTORY/TM/INSTRUCTIONSEASY.mp3"></audio>
+<audio id="TMMQinstructions" src="GAMESSTORY/TM/INSTRUCTIONSMEDIUM.mp3"></audio>  
+<audio id="TMHQinstructions" src="GAMESSTORY/TM/INSTRUCTIONSDIFFICULT.mp3"></audio>  
+
+<audio id="TMyay" src="GAMESSTORY/TM/yay.mp3"></audio>
+<audio id="TMgreat" src="GAMESSTORY/TM/great.mp3"></audio>
+<audio id="TMfantastic" src="GAMESSTORY/TM/fantastic.mp3"></audio>
+
+<audio id="VOICETMEQ1" src="GAMESSTORY/TM/EASYQ1.mp3"></audio>
+<audio id="VOICETMEQ2" src="GAMESSTORY/TM/EASYQ2.mp3"></audio>
+<audio id="VOICETMEQ3" src="GAMESSTORY/TM/EASYQ3.mp3"></audio>
+
+<audio id="VOICETMMQ1" src="GAMESSTORY/TM/MEDIUMQ1.mp3"></audio>
+<audio id="VOICETMMQ2" src="GAMESSTORY/TM/MEDIUMQ2.mp3"></audio>
+<audio id="VOICETMMQ3" src="GAMESSTORY/TM/MEDIUMQ3.mp3"></audio>
+
+<audio id="VOICETMHQ1" src="GAMESSTORY/TM/DIFFICULTQ1.mp3"></audio>
+<audio id="VOICETMHQ2" src="GAMESSTORY/TM/DIFFICULTQ2.mp3"></audio>
+<audio id="VOICETMHQ3" src="GAMESSTORY/TM/DIFFICULTQ3.mp3"></audio>
+
+<audio id="congratsyoudidwonderfulTM" src="GAMESSTORY/TM/congrats+youdidwonderful.mp3"></audio>
+<audio id="TMfantastic" src="GAMESSTORY/TM/fantastic.mp3"></audio>
+
+<audio id="PROCEEDALONE" src="GAMESSTORY/DS/proceedalone.mp3"></audio>
+<audio id="PROCEED" src="GAMESSTORY/DS/proceed.mp3"></audio>
+<audio id="playagain" src="GAMESSTORY/DS/playagain.mp3"></audio>
+
+<audio id="TURTLE" src="GAMESSTORY/TM/TURTLE.mp3"></audio>
+<audio id="MONKEY" src="GAMESSTORY/TM/MONKEY.mp3"></audio>
+<audio id="FELLDOWN" src="GAMESSTORY/TM/FELLDOWN.mp3"></audio>
+<audio id="THORNS" src="GAMESSTORY/TM/THORNS.mp3"></audio>
+<audio id="WATER" src="GAMESSTORY/TM/WATER.mp3"></audio>
+<audio id="LAUGHED" src="GAMESSTORY/TM/LAUGHED.mp3"></audio>
+<audio id="DROWN" src="GAMESSTORY/TM/DROWN.mp3"></audio>
+<audio id="FIRE" src="GAMESSTORY/TM/FIRE.mp3"></audio>
+<audio id="SWIM" src="GAMESSTORY/TM/SWIM.mp3"></audio>
+<audio id="DIVIDE" src="GAMESSTORY/TM/DIVIDE.mp3"></audio>
+<audio id="TWO" src="GAMESSTORY/TM/TWO.mp3"></audio>
+<audio id="PLANTING" src="GAMESSTORY/TM/plant.mp3"></audio>
+<audio id="HUNGRY" src="GAMESSTORY/TM/HUNGRY.mp3"></audio>
+<audio id="FLOATING" src="GAMESSTORY/TM/FLOATING.mp3"></audio>
+<audio id="RIVER" src="GAMESSTORY/TM/RIVER.mp3"></audio>
+<audio id="CLIMBED" src="GAMESSTORY/TM/CLIMBED.mp3"></audio>
+<audio id="ATE" src="GAMESSTORY/TM/ATE.mp3"></audio>
+<audio id="BANANAS" src="GAMESSTORY/TM/BANANAS.mp3"></audio>
+<audio id="ANGRY" src="GAMESSTORY/TM/ANGRY.mp3"></audio>
+<audio id="WEEDS" src="GAMESSTORY/TM/WEEDS.mp3"></audio>
+<audio id="TREE" src="GAMESSTORY/TM/TREE.mp3"></audio>
+<audio id="ENEMIES" src="GAMESSTORY/TM/ENEMIES.mp3"></audio>

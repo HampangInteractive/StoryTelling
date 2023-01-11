@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body
+    {
+    width: 100%;
+    height: 100%;
+    background-image:url(difficult.png);
+    background-size: cover;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+    }
+
+.droppable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  text-transform: lowercase;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  margin: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: move;
+  transition: 0.5s;
+}
+
+.box span {
+  pointer-events: none;
+}
+.buttonLater {
+  font-family: 'Fredoka One';
+  padding: 15px 30px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+  background-image: linear-gradient(#ff4700, #b10000);
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.buttonLetsGo {
+      font-family: 'Fredoka One';
+      padding: 15px 30px;
+      border: 0px solid #ffffff;
+      border-radius: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.5rem;
+      user-select: none;
+      cursor: pointer;
+      background-image: linear-gradient(#48cd04, #2b7000);
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+.button1 {
+  padding: 15px;
+  border: 3px solid #ffffff;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+
+.draggable {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20px;
+    margin: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: bold;
+    user-select: none;
+    cursor: move;
+    transition: 0.5s;
+    background-color: #e64743;
+    transition: opacity 0.2s;
+}
+.draggable:hover {
+  opacity: 0.5;
+}
+.droppable {
+  height: 10rem;
+  width: 10rem;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 9rem;
+  font-weight: bold;
+  background-color: #f6f0ce;
+  border-radius: 20px;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+  
+}
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none; /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+.droppable.dropped {
+  color: #ffffff;
+  background-color: #e64743;
+}
+
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+.droppable.dropped i {
+  pointer-events: none;
+  font-style: normal;
+  
+}
+.draggable.dropped{
+  opacity: 0.3;
+  cursor: default;
+}
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+ .imageset{
+  width: 380px;
+  cursor: pointer;
+ }
+
+ #NEXT{ 
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  cursor: pointer;
+} 
+#PREV{ 
+  /* position: fixed;
+  top: 50%;
+  left: 10%;
+  cursor: pointer;
+margin-left: -150%; */
+cursor: pointer;
+} 
+
+#TMHQLIVESON1{ 
+  position: fixed;    
+  top: 23rem;
+  left: 20%;
+} 
+#TMHQLIVESON2{ 
+  position: fixed;    
+  top: 23rem;
+  left: 32%;
+} 
+#TMHQLIVESON3{ 
+  position: fixed;    
+  top: 23rem;
+  left: 44%;
+} 
+#TMHQLIVESON4{ 
+  position: fixed;    
+  top: 23rem;
+  left: 56%;
+} 
+#TMHQLIVESON5{ 
+  position: fixed;    
+  top: 23rem;
+  left: 68%;
+} 
+#fourletters{ 
+  position: fixed;   
+  top: 11rem;
+  left: 14%; 
+} 
+
+@media (max-width: 600px) {
+  html { font-size: 14px; }
+  .draggable-elements { margin: 1.5rem; }
+  
+}

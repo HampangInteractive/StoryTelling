@@ -1,0 +1,1041 @@
+@import url(https://fonts.googleapis.com/css?family=FredokaOne);
+ol, ul {
+    list-style: none;
+    text-align: center;
+}
+li {
+    display: inline-block;
+    padding: 20px 20px 20px;
+    vertical-align: middle;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+font-family: 'Fredoka One';font-size: 22px;
+
+}
+
+img {
+  /* background-color: rgba(16,46,72,0.6); */
+  background-blend-mode: multiply;
+}
+
+.container{
+  padding: 1rem;
+  float: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px; 
+}
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgb(255 255 255 / 39%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 97%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+}
+
+.content-details h1{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+.content h1 {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.content:hover h3 {
+  -webkit-transform: translate3d(-1rem, 0, 0);
+          transform: translate3d(-1rem, 0, 0);
+}
+.content i {
+  position: absolute;
+  width: 1.1em;
+  right: -1.4rem;
+  opacity: 1;
+  top: 38%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+}
+
+.content:hover i {
+  opacity: 1;
+  right: -3rem;
+}
+
+.button1 {
+    padding: 15px;
+    border: 3px solid #ffffff;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    background-color: #efa29a;
+  }
+  
+
+.btnStories {
+  padding: 15px;
+  border: 3px solid #f15e3e;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  background: none;
+  color: #f15e3e;
+}
+
+.DSbtnEasy {
+  font-family: 'Fredoka One';
+  padding: 15px 100px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background: #ea9d12;
+  background-image: linear-gradient(#f3b76d, #9b5d0c);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 10px;
+}
+
+.DSbtnMedium {
+  font-family: 'Fredoka One';
+  padding: 15px 66px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background: #ea9d12;
+  background-image: linear-gradient(#fa703a, #bb4517);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+
+.DSbtnDifficult {
+  font-family: 'Fredoka One';
+  padding: 15px 36px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background: #ea9d12;
+  background-image: linear-gradient(#e23f1f, #811a06);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 10px;
+}
+
+.TMbtnEasy {
+  font-family: 'Fredoka One';
+  padding: 15px 100px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background-image: linear-gradient(#2ec892, #22ae7d);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 10px;
+}
+
+.TMbtnMedium {
+  font-family: 'Fredoka One';
+  padding: 15px 66px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background-image: linear-gradient(#03936c, #027a59);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+
+.TMbtnDifficult {
+  font-family: 'Fredoka One';
+  padding: 15px 36px;
+  border: 0px solid #ffffff;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  background-image: linear-gradient(#02734b, #024c32);
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin: 10px;
+}
+
+#logo{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* padding: 3rem 15rem; */
+  padding: 3rem 0rem 0rem 12rem;
+} 
+
+#DSMenu{ 
+  position: fixed;
+  top: 20REM;
+  RIGHT: 15REM;
+} 
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+#nice{ 
+  position: fixed;
+  top: 15%;
+  left: 13%;
+} 
+
+#Left{ 
+  position: fixed;
+  top: 15%;
+  left: 9%;
+} 
+
+#Right{ 
+  color: white;
+  width: 100%;
+  position: fixed;
+  background-color: #39936d;
+  padding: 20px;
+  font-family: 'Fredoka One';
+  font-size: 22px;
+} 
+
+input[type=text]{
+  width:70%;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+textarea[type=text]{
+  width:70%;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+textarea[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+label{
+  font-family: 'Fredoka One';
+}
+
+#LATER {
+    position: fixed;
+    top: 50%;
+    right: 20%;
+  }
+  
+  #LETSGO {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+  }
+
+  #LAT{
+    position: fixed;
+    top: 60%;
+    left: 25%;
+    cursor: pointer;
+  }
+  
+  #LETS {
+    position: fixed;
+    top: 60%;
+    right: 25%;
+    cursor: pointer;
+  }
+  #NEXT{ 
+    float: right;
+    margin-right: 20%;
+    cursor: pointer;
+  } 
+  
+  #PREV{ 
+    margin-left: 20%;
+    cursor: pointer;
+  } 
+  /* #NEXT{ 
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    cursor: pointer;
+  } 
+  
+  #PREV{ 
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    cursor: pointer;
+  }  */
+
+  #FLOAT{ 
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+  } 
+  
+#VIDEOFLOAT{ 
+  position: fixed;    
+  top: 18rem;
+  RIGHT: 3rem;
+} 
+
+#VIDEOFLOAT1{ 
+  position: fixed;    
+  top: 20rem;
+  right: 10%;
+} 
+
+button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+/* -------------------- */
+#DSEQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#DSEQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#DSEQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#DSEQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#DSEQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#DSEQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+}
+
+
+#DSEQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSEQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSEQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSEQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSEQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#DSEQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSEQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSEQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSEQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSEQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+#DSMQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#DSMQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#DSMQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#DSMQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#DSMQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#DSMQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+} 
+
+#DSMQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSMQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSMQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSMQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSMQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#DSMQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSMQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSMQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSMQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSMQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+#DSHQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#DSHQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#DSHQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#DSHQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#DSHQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#DSHQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+} 
+
+#DSHQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSHQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSHQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSHQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSHQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#DSHQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#DSHQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#DSHQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#DSHQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#DSHQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+ #TMEQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#TMEQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#TMEQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#TMEQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#TMEQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#TMEQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+} 
+
+#TMEQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMEQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMEQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMEQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMEQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#TMEQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMEQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMEQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMEQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMEQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+#TMMQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#TMMQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#TMMQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#TMMQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#TMMQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#TMMQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+} 
+
+#TMMQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMMQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMMQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMMQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMMQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#TMMQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMMQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMMQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMMQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMMQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+#TMHQLIVES{
+  top: 18rem;
+  left: 15rem;
+  position: absolute;
+  z-index: 10;
+}
+#TMHQLIVES1{ 
+  position: fixed;    
+  top: 15rem;
+  left: 15%;
+} 
+#TMHQLIVES2{ 
+  position: fixed;    
+  top: 15rem;
+  left: 18%;
+} 
+#TMHQLIVES3{ 
+  position: fixed;    
+  top: 15rem;
+  left: 21%;
+} 
+#TMHQLIVES4{ 
+  position: fixed;    
+  top: 15rem;
+  left: 24%;
+} 
+#TMHQLIVES5{ 
+  position: fixed;    
+  top: 15rem;
+  left: 27%;
+} 
+
+#TMHQLIVESON1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMHQLIVESON2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMHQLIVESON3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMHQLIVESON4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMHQLIVESON5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+
+#TMHQLIVESOFF1{ 
+  position: fixed;    
+  top: 17rem;
+  left: 24%;
+} 
+#TMHQLIVESOFF2{ 
+  position: fixed;    
+  top: 17rem;
+  left: 35%;
+} 
+#TMHQLIVESOFF3{ 
+  position: fixed;    
+  top: 17rem;
+  left: 46%;
+} 
+#TMHQLIVESOFF4{ 
+  position: fixed;    
+  top: 17rem;
+  left: 57%;
+} 
+#TMHQLIVESOFF5{ 
+  position: fixed;    
+  top: 17rem;
+  left: 68%;
+} 
+/* -------------------- */
+.hover-underline-animation3 {
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Fredoka One';
+  font-size: 40px;
+    }
+    .hover-underline-animation3:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .hover-underline-animation3:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+.hover-underline-animation2 {
+  display: inline-block;
+  color: #da851b;
+  cursor: pointer;
+  font-family: 'Fredoka One';
+  font-size: 40px;
+    }
+    .hover-underline-animation2:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .hover-underline-animation2:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+.hover-underline-animation1 {
+  display: inline-block;
+  color: #1d3b53;
+  cursor: pointer;
+  font-family: 'Fredoka One';
+  font-size: 40px;
+    }
+    .hover-underline-animation1:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .hover-underline-animation1:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    
+  .hover-underline-animation {
+    display: inline-block;
+    color: #da851b;
+    cursor: pointer;
+    font-family: 'Fredoka One';
+    font-size: 40px;
+      }
+      .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }

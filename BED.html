@@ -1,0 +1,63 @@
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<link rel="stylesheet" type="text/css" href="adjective.css"> 
+<head>
+    <style>
+
+      .box{
+      width: 100rem;
+      height: 56rem;          
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      }
+        #BED {
+           background-image: url("ArrangeTheLetters/BG_IMG.png");
+           background-repeat: no-repeat;
+           background-size: contain;
+           font-family: 'Fredoka One';
+           font-size: 22px;
+           zoom: 90%;
+       }
+       
+   </style>
+   <script>
+
+        function BED() {
+              var audio = document.getElementById("AUDIO_BED");
+              audio.play();
+            }  
+    
+   </script>
+<body style="overflow: hidden;">
+    <div class="box" id="BED">
+          <table>
+            <tbody>
+              <tr>
+                <td><img src="ArrangeTheLetters/pictures/BED.png" onclick="BED();" class="imageset"></td>
+                <td>
+                  <div class="center" style="padding: 6% 0;text-align: center;">
+                    <section style="text-transform: lowercase;" class="droppable-elements">
+                        <div style="text-transform: lowercase;" class="droppable" data-draggable-id="b"><span></span></div>
+                        <div style="text-transform: lowercase;" class="droppable" data-draggable-id="e"><span></span></div>
+                        <div style="text-transform: lowercase;" class="droppable" data-draggable-id="d"><span></span></div>
+                      </section>
+                      <section class="draggable-elements">
+                        <li class="fa-d draggable" draggable="true" style="color: #ffffff;" id="d"></li>
+                        <li class="fa-b draggable" draggable="true" style="color: #ffffff;" id="b"></li>
+                        <li class="fa-e draggable" draggable="true" style="color: #ffffff;" id="e"></li>
+                      </section>
+              </div>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+   </body>
+   <script src="BED.js"></script>
+   <audio id="AUDIO_BED" src="ArrangeTheLetters/audio/bed.mp3" type="audio/mp3"></audio>

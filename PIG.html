@@ -1,0 +1,151 @@
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<link rel="stylesheet" type="text/css" href="adjective.css"> 
+<head>
+    <style>
+        #SCORE{
+         visibility: hidden;
+       }
+      .box{
+      width: 100rem;
+      height: 56rem;          
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      }
+      
+       #PIG {
+           background-image: url("ArrangeTheLetters/BG_IMG.png");
+           background-repeat: no-repeat;
+           background-size: contain;
+           font-family: 'Fredoka One';
+           font-size: 22px;
+           zoom: 90%;
+       }
+       #SCORE {
+           background-image: url("ArrangeTheLetters/SCOREBG.png");
+           background-repeat: no-repeat;
+           background-size: contain;
+           font-family: 'Fredoka One';
+           font-size: 22px;
+           zoom: 90%;
+       }
+   </style>
+   <script>
+
+    function SCORE(){
+        document.getElementById("PIG").style.visibility = "hidden";
+        document.getElementById("SCORE").style.visibility = "visible";
+    }; 
+            
+       function PIG() {
+              var audio = document.getElementById("AUDIO_PIG");
+              audio.play();
+            }  
+            function FOX() {
+              setTimeout(function(){ 
+                window.location.href = "FOX.html";
+          }, 10);
+          }
+        function category() {
+              setTimeout(function(){ 
+                window.location.href = "Category.html";
+          }, 10);
+          }
+          function fantastic() {
+            setTimeout(function(){document.getElementById("fantastic").play();},500)
+          }
+          function fantasticPause() {         
+              var myAudio19 = document.getElementById("fantastic");
+              if(myAudio19.play) {
+                  myAudio19.pause();
+                  myAudio19.currentTime = 0;
+              }
+            }
+            function Later() {
+            setTimeout(function(){document.getElementById("Later").play();},50)
+          }    
+          function playagain() {
+            setTimeout(function(){document.getElementById("playagain").play();},500)
+            } 
+</script>
+
+<body style="overflow: hidden;">
+
+    <div class="box" id="PIG">
+    <div class="center" style="padding: 25.8% 0;width: 90%;text-align: center;">
+      <table style="width: 100%;">
+        <tbody>
+          <tr>
+            <td style="width: 15%;">
+              <div id="PREV">
+                <img onclick="FOX();"  src="SYMBOLS/prev.png" width="70" height="70">
+              </div>
+            </td>
+            <td style="width: 85%;">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><img src="ArrangeTheLetters/pictures/PIG.png" onclick="PIG();" class="imageset"></td>
+                    <td><div class="center" style="padding: 6% 0;text-align: center;">
+                      <section style="text-transform: lowercase;" class="droppable-elements">
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="p"><span></span></div>
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="i"><span></span></div>
+                          <div style="text-transform: lowercase;" class="droppable" data-draggable-id="g"><span></span></div>
+                        </section>
+                        <section class="draggable-elements">
+                          <li class="fa-g draggable" draggable="true" style="color: #ffffff;" id="g"></li>
+                          <li class="fa-p draggable" draggable="true" style="color: #ffffff;" id="p"></li>
+                          <li class="fa-i draggable" draggable="true" style="color: #ffffff;" id="i"></li>
+                        </section>
+                  </div></td>
+                  </tr>
+                </tbody>
+              </table> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <div class="box" id="SCORE">
+        <div class="center" style="padding: 3% 0;text-align: center;">
+            <br/>     
+            <h4><label style="color: #ffffff;font-size: 4.5rem; font-weight: 300;">FANTASTIC</label>&nbsp;
+              <label style="color: #a40000;font-size: 4.5rem; font-weight: 300;">YOU NAILED IT!<br/><br/></label>     
+             </h4>
+             <div id="TMHQLIVESON1"><img src="SYMBOLS/staron1.png" width="200px" height="180px"></div>
+           <div id="TMHQLIVESON2"><img src="SYMBOLS/staron2.png" width="200px" height="180px"></div>
+           <div id="TMHQLIVESON3"><img src="SYMBOLS/staron3.png" width="200px" height="180px"></div>
+           <div id="TMHQLIVESON4"><img src="SYMBOLS/staron4.png" width="200px" height="180px"></div>
+           <div id="TMHQLIVESON5"><img src="SYMBOLS/staron5.png" width="200px" height="180px"></div>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+              <h4 style="color: #ffffff;font-size: 2.4rem; font-weight: 300;">Way to go! You identified all the correct answers</h4>
+    
+              <button class="buttonLater" onclick="fantasticPause(); Later(); myVar = setTimeout(NewGame, 1500);">Later</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="buttonLetsGo" onclick="playagain(); fantasticPause(); myVar = setTimeout(category, 2100);">Play again</button>    
+            </div>
+    </div>
+   </body>
+   <script src="PIG.js"></script>
+   <audio id="AUDIO_PIG" src="ArrangeTheLetters/audio/pig.mp3" type="audio/mp3"></audio>
+   <audio id="Later" src="GAMESSTORY/TM/LATER.mp3" type="audio/mp3"></audio>
+   <audio id="playagain" src="GAMESSTORY/DS/playagain.mp3"></audio>
+   <audio id="fantastic" src="GAMESSTORY/TM/fantastic.mp3"></audio>

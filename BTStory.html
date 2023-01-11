@@ -1,0 +1,1606 @@
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<script src="modal.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<head>
+    <style>
+        #BT0, #BT1, #BT2, #BT3, #BT4, #BT5, #BT6, #BT7, #BT8, #BT9, #BT10, #BT11, #BT12, #BT13, #BT14{
+          visibility: hidden;
+        }
+    
+       .box{
+       width: 100rem;
+       height: 56rem;          
+       position: absolute;
+       left: 0;
+       right: 0;
+       margin: 0 auto;
+       }
+       .buttonLetsGo {
+          font-family: 'Fredoka One';
+          padding: 15px 30px;
+          border: 0px solid #ffffff;
+          border-radius: 0.5rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 1.5rem;
+          user-select: none;
+          cursor: pointer;
+          background-image: linear-gradient(#48cd04, #2b7000);
+          color: #ffffff;
+          letter-spacing: 1px;
+        }
+        div.box:empty {
+              display: none
+            }
+        #more {display: none;}
+        .buttonLater {
+          font-family: 'Fredoka One';
+          padding: 15px 30px;
+          border: 0px solid #ffffff;
+          border-radius: 0.5rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 1.5rem;
+          user-select: none;
+          cursor: pointer;
+          background-image: linear-gradient(#ff4700, #b10000);
+          color: #ffffff;
+          letter-spacing: 1px;
+        }
+        .center {
+            text-align: center;
+          }
+    
+          #BTCONFIRM{
+            background-image: url("pages/BT/choosedificulty.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-family: 'Fredoka One';
+            font-size: 22px;
+            transition-property: opacity, left;
+            transition-duration: 3s, 5s, 2s, 1s;
+            zoom: 90%;
+          }
+          #BT0 {
+              background-image: url("pages/BT/0.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT1 {
+              background-image: url("pages/BT/1.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT2 {
+              background-image: url("pages/BT/2.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT3 {
+              background-image: url("pages/BT/3.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT4 {
+              background-image: url("pages/BT/4.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT5 {
+              background-image: url("pages/BT/5.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT6 {
+              background-image: url("pages/BT/6.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT7 {
+              background-image: url("pages/BT/7.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT8 {
+              background-image: url("pages/BT/8.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT9 {
+              background-image: url("pages/BT/9.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT10 {
+              background-image: url("pages/BT/10.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT11 {
+              background-image: url("pages/BT/11.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT12 {
+              background-image: url("pages/BT/12.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT13 {
+              background-image: url("pages/BT/13.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+          #BT14 {
+              background-image: url("pages/BT/14.gif");
+              background-repeat: no-repeat;
+              background-size: contain;
+              font-family: 'Fredoka One';
+              font-size: 22px;
+              transition-property: opacity, left;
+              transition-duration: 3s, 5s, 2s, 1s;
+              zoom: 90%;
+          }
+        
+    </style>
+    <script>
+        function letsgo(){
+          document.getElementById("letsgo").play();
+          }
+        function Later() {
+            setTimeout(function(){document.getElementById("Later").play();},50)
+          }  
+        function myFunctionBT0(){
+            document.getElementById("BT0").style.visibility = "visible";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT1(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "visible";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT2(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "visible";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT3(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "visible";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT4(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "visible";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT5(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "visible";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT6(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "visible";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT7(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "visible";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT8(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "visible";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT9(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "visible";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT10(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "visible";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT11(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "visible";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT12(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "visible";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT13(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "visible";
+            document.getElementById("BT14").style.visibility = "hidden";
+        }; 
+        function myFunctionBT14(){
+            document.getElementById("BT0").style.visibility = "hidden";
+            document.getElementById("BT1").style.visibility = "hidden";
+            document.getElementById("BT2").style.visibility = "hidden";
+            document.getElementById("BT3").style.visibility = "hidden";
+            document.getElementById("BT4").style.visibility = "hidden";
+            document.getElementById("BT5").style.visibility = "hidden";
+            document.getElementById("BT6").style.visibility = "hidden";
+            document.getElementById("BT7").style.visibility = "hidden";
+            document.getElementById("BT8").style.visibility = "hidden";
+            document.getElementById("BT9").style.visibility = "hidden";
+            document.getElementById("BT10").style.visibility = "hidden";
+            document.getElementById("BT11").style.visibility = "hidden";
+            document.getElementById("BT12").style.visibility = "hidden";
+            document.getElementById("BT13").style.visibility = "hidden";
+            document.getElementById("BT14").style.visibility = "visible";
+        }; 
+        
+        function VOICECONFIRM()
+            {
+              var myAudio20 = document.getElementById("BTConfirm");
+              var image20 = document.getElementById('soundonoffConfirm');
+              if(myAudio20.paused) {
+                  myAudio20.play();
+                  image20.src = "SYMBOLS/soundoffbutton.png";
+              }
+              else {
+                myAudio20.pause();
+                image20.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+        function VOICEBTCONFIRMPAUSE()
+            {
+              var myAudio11 = document.getElementById("BTConfirm");
+              var image11 = document.getElementById('soundonoffConfirm');
+              if(myAudio11.play) {
+                  myAudio11.pause();
+                  myAudio11.currentTime = 0;
+                  image11.src = "SYMBOLS/soundonbutton.png";
+              }
+            }
+    
+          function BTPlay1()
+          {
+            var myAudio1 = document.getElementById("BTstory1");
+            var image1 = document.getElementById('BTsoundonoff1');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay2()
+          {
+            var myAudio1 = document.getElementById("BTstory2");
+            var image1 = document.getElementById('BTsoundonoff2');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay3()
+          {
+            var myAudio1 = document.getElementById("BTstory3");
+            var image1 = document.getElementById('BTsoundonoff3');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay4()
+          {
+            var myAudio1 = document.getElementById("BTstory4");
+            var image1 = document.getElementById('BTsoundonoff4');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay5()
+          {
+            var myAudio1 = document.getElementById("BTstory5");
+            var image1 = document.getElementById('BTsoundonoff5');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay6()
+          {
+            var myAudio1 = document.getElementById("BTstory6");
+            var image1 = document.getElementById('BTsoundonoff6');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay7()
+          {
+            var myAudio1 = document.getElementById("BTstory7");
+            var image1 = document.getElementById('BTsoundonoff7');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay8()
+          {
+            var myAudio1 = document.getElementById("BTstory8");
+            var image1 = document.getElementById('BTsoundonoff8');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay9()
+          {
+            var myAudio1 = document.getElementById("BTstory9");
+            var image1 = document.getElementById('BTsoundonoff9');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay10()
+          {
+            var myAudio1 = document.getElementById("BTstory10");
+            var image1 = document.getElementById('BTsoundonoff10');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay11()
+          {
+            var myAudio1 = document.getElementById("BTstory11");
+            var image1 = document.getElementById('BTsoundonoff11');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay12()
+          {
+            var myAudio1 = document.getElementById("BTstory12");
+            var image1 = document.getElementById('BTsoundonoff12');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay13()
+          {
+            var myAudio1 = document.getElementById("BTstory13");
+            var image1 = document.getElementById('BTsoundonoff13');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          function BTPlay14()
+          {
+            var myAudio1 = document.getElementById("BTstory14");
+            var image1 = document.getElementById('BTsoundonoff14');
+            if(myAudio1.paused) {
+                myAudio1.play();
+                image1.src = "SYMBOLS/mute.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/play.png";
+            }
+          }  
+          
+          function BTStoryPause1()
+          {
+            var myAudio1 = document.getElementById("BTstory1");
+            var image1 = document.getElementById('BTsoundonoff1');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause2()
+          {
+            var myAudio1 = document.getElementById("BTstory2");
+            var image1 = document.getElementById('BTsoundonoff2');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause3()
+          {
+            var myAudio1 = document.getElementById("BTstory3");
+            var image1 = document.getElementById('BTsoundonoff3');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause4()
+          {
+            var myAudio1 = document.getElementById("BTstory4");
+            var image1 = document.getElementById('BTsoundonoff4');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause5()
+          {
+            var myAudio1 = document.getElementById("BTstory5");
+            var image1 = document.getElementById('BTsoundonoff5');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause6()
+          {
+            var myAudio1 = document.getElementById("BTstory6");
+            var image1 = document.getElementById('BTsoundonoff6');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause7()
+          {
+            var myAudio1 = document.getElementById("BTstory7");
+            var image1 = document.getElementById('BTsoundonoff7');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause8()
+          {
+            var myAudio1 = document.getElementById("BTstory8");
+            var image1 = document.getElementById('BTsoundonoff8');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause9()
+          {
+            var myAudio1 = document.getElementById("BTstory9");
+            var image1 = document.getElementById('BTsoundonoff9');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause10()
+          {
+            var myAudio1 = document.getElementById("BTstory10");
+            var image1 = document.getElementById('BTsoundonoff10');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause11()
+          {
+            var myAudio1 = document.getElementById("BTstory11");
+            var image1 = document.getElementById('BTsoundonoff11');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause12()
+          {
+            var myAudio1 = document.getElementById("BTstory12");
+            var image1 = document.getElementById('BTsoundonoff12');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause13()
+          {
+            var myAudio1 = document.getElementById("BTstory13");
+            var image1 = document.getElementById('BTsoundonoff13');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause14()
+          {
+            var myAudio1 = document.getElementById("BTstory14");
+            var image1 = document.getElementById('BTsoundonoff14');
+            if(myAudio1.play) {
+                myAudio1.pause();
+                image1.src = "SYMBOLS/play.png";
+            }
+            else {
+              myAudio1.pause();
+              image1.src = "SYMBOLS/mute.png";
+            }
+          }
+
+          function BTStoryPause1BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory1");
+            var image1 = document.getElementById('BTsoundonoff1');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause2BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory2");
+            var image1 = document.getElementById('BTsoundonoff2');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause3BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory3");
+            var image1 = document.getElementById('BTsoundonoff3');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause4BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory4");
+            var image1 = document.getElementById('BTsoundonoff4');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause5BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory5");
+            var image1 = document.getElementById('BTsoundonoff5');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause6BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory6");
+            var image1 = document.getElementById('BTsoundonoff6');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause7BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory7");
+            var image1 = document.getElementById('BTsoundonoff7');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause8BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory8");
+            var image1 = document.getElementById('BTsoundonoff8');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause9BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory9");
+            var image1 = document.getElementById('BTsoundonoff9');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause10BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory10");
+            var image1 = document.getElementById('BTsoundonoff10');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause11BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory11");
+            var image1 = document.getElementById('BTsoundonoff11');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause12BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory12");
+            var image1 = document.getElementById('BTsoundonoff12');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause13BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory13");
+            var image1 = document.getElementById('BTsoundonoff13');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+          function BTStoryPause14BACK()
+          {
+            var myAudio1 = document.getElementById("BTstory14");
+            var image1 = document.getElementById('BTsoundonoff14');
+            if(myAudio1.pause) {
+                myAudio1.play();
+                myAudio1.currentTime = 0;
+                image1.src = "SYMBOLS/mute.png";
+            }
+          }
+
+        function myFunctionStories() {
+              setTimeout(function(){ 
+                window.location.href = "Stories.html";
+          }, 1200);
+          }
+        function BTGame() {
+              setTimeout(function(){ 
+                window.location.href = "BTGame.html";
+          }, 10);
+          }
+    </script>
+  <body style="overflow: hidden;">
+
+            <div class="box" id="BTCONFIRM">
+                <div class="center" style="padding: 6% 0;text-align: center;">
+                <br/>
+                <br/>
+                <table style="width: 100%;">
+                    <tbody>
+                    <tr>
+                    <td style="width: 31%;">
+                    <img id="soundonoffConfirm" onclick="VOICECONFIRM();" src="SYMBOLS/soundonbutton.png" width="100" height="100" style="float:right;top: 10%;"></td>
+                    <td style="width: 70%;height: 108%;">
+                    <p style="color: #0765a6;font-size: 7rem;letter-spacing: 14px; font-weight: 900;">CONFIRM</p></td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+                    <h4 style="color: #f44336;font-size: 3.5rem;">Do you wish to proceed to the story?</h4>
+                    <div>
+                    <br/>
+                        <button class="buttonLater" onclick="Later(); VOICEBTCONFIRMPAUSE(); myFunctionStories();">Later</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="buttonLetsGo" onclick="letsgo(); VOICEBTCONFIRMPAUSE(); myVar = setTimeout(myFunctionBT0, 2800);">Lets go</button>
+                        </div>   
+                    </div>    
+            </div>
+
+            <div class="box" id="BT0">
+                <div class="center" style="padding: 30% 0;text-align: center;">
+                <button class="buttonLater" onclick="Later(); myFunctionStories();">Later</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="buttonLetsGo" onclick="letsgo(); myVar = setTimeout(BTStoryPause1BACK, 3500); myVar = setTimeout(myFunctionBT1, 2800);">Lets go</button>
+                
+                </div>
+            </div>
+
+            <div class="box" id="BT1">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                          &nbsp;
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause1(); myVar = setTimeout(BTStoryPause2BACK, 100); myFunctionBT2();" src="SYMBOLS/next.png" width="70" height="70">
+                          </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -47%;text-align: center;">
+                <br/>
+                <br/>
+                <table style="width: 100%;">
+                    <tbody>
+                    <tr>
+                        <td style="width: 19%;"><img id="BTsoundonoff1" onclick="BTPlay1();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+                </div>        
+            </div>   
+
+            <div class="box" id="BT2">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause2(); BTStoryPause1BACK(); myFunctionBT1();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause2(); myVar = setTimeout(BTStoryPause3BACK, 100); myFunctionBT3();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -47%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 18%;"><img id="BTsoundonoff2" onclick="BTPlay2();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>
+             </div>
+
+             <div class="box" id="BT3">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause3(); BTStoryPause2BACK(); myFunctionBT2();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause3(); myVar = setTimeout(BTStoryPause4BACK, 100); myFunctionBT4();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -54%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 0%;"><img id="BTsoundonoff3" onclick="BTPlay3();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>  
+             </div>
+
+             <div class="box" id="BT4">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause4(); BTStoryPause3BACK(); myFunctionBT3();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause4(); myVar = setTimeout(BTStoryPause5BACK, 100); myFunctionBT5();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -19%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 4%;"><img id="BTsoundonoff4" onclick="BTPlay4();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>  
+             </div>
+             
+             <div class="box" id="BT5">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause5(); BTStoryPause4BACK(); myFunctionBT4();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause5(); myVar = setTimeout(BTStoryPause6BACK, 100); myFunctionBT6();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -50.5%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 16%;"><img id="BTsoundonoff5" onclick="BTPlay5();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>     
+             </div>
+
+             <div class="box" id="BT6">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause6(); BTStoryPause5BACK(); myFunctionBT5();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause6(); myVar = setTimeout(BTStoryPause7BACK, 100); myFunctionBT7();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -47%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width:30%;"><img id="BTsoundonoff6" onclick="BTPlay6();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>  
+             </div>
+
+             <div class="box" id="BT7">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause7(); BTStoryPause6BACK(); myFunctionBT6();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause7(); myVar = setTimeout(BTStoryPause8BACK, 100); myFunctionBT8();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -52%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 63%;"><img id="BTsoundonoff7" onclick="BTPlay7();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>      
+             </div>
+
+             <div class="box" id="BT8">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause8(); BTStoryPause7BACK(); myFunctionBT7();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause8(); myVar = setTimeout(BTStoryPause9BACK, 100); myFunctionBT9();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -52%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 11%;"><img id="BTsoundonoff8" onclick="BTPlay8();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>
+             </div>
+
+             <div class="box" id="BT9">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause9(); BTStoryPause8BACK(); myFunctionBT8();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause9(); myVar = setTimeout(BTStoryPause10BACK, 100); myFunctionBT10();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -23%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 60%;"><img id="BTsoundonoff9" onclick="BTPlay9();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>   
+             </div>
+
+             <div class="box" id="BT10">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause10(); BTStoryPause9BACK(); myFunctionBT9();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause10(); myVar = setTimeout(BTStoryPause11BACK, 100); myFunctionBT11();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -23%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 48%;"><img id="BTsoundonoff10" onclick="BTPlay10();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+
+             <div class="box" id="BT11">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause11(); BTStoryPause10BACK(); myFunctionBT10();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause11(); myVar = setTimeout(BTStoryPause12BACK, 100); myFunctionBT12();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -49%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 64%;"><img id="BTsoundonoff11" onclick="BTPlay11();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>         
+             </div>
+
+             <div class="box" id="BT12">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div style="position: fixed;top: 50%;left: 6%;cursor: pointer;">
+                          <img onclick="BTStoryPause12(); BTStoryPause11BACK(); myFunctionBT11();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause12(); myVar = setTimeout(BTStoryPause13BACK, 100); myFunctionBT13();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -44%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 5%;"><img id="BTsoundonoff12" onclick="BTPlay12();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>    
+             </div>
+
+             <div class="box" id="BT13">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause13(); BTStoryPause12BACK(); myFunctionBT12();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause13(); myVar = setTimeout(BTStoryPause14BACK, 100); myFunctionBT14();" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -55%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 48%;"><img id="BTsoundonoff13" onclick="BTPlay13();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>  
+             </div>
+
+             <div class="box" id="BT14">
+              <div class="center" style="padding: 25.8% 0;;text-align: center;">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 20%;">
+                        <div id="PREV">
+                          <img onclick="BTStoryPause14(); BTStoryPause13BACK(); myFunctionBT13();" src="SYMBOLS/prev.png" width="70" height="70">
+                             </div>
+                      </td>
+                      <td style="width: 60%;">&nbsp;</td>
+                      <td style="width: 20%;">
+                        <div id="NEXT">
+                          <img onclick="BTStoryPause14(); myVar = setTimeout(BTGame, 50);" src="SYMBOLS/next.png" width="70" height="70">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+                <div class="center" style="margin-top: -46%;text-align: center;">
+                  <br/>
+                  <br/>
+                  <table style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td style="width: 25%;"><img id="BTsoundonoff14" onclick="BTPlay14();" src="SYMBOLS/mute.png" width="40" height="40" style="float:right;margin-right: 1.3em;top: 10%;">&nbsp;&nbsp;&nbsp;</td>
+                        <td style="font-size: 55px; width: 70%;">&nbsp;</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+              </div>   
+             </div>
+
+</body>
+<audio id="BTstory1" src="voice/BT/1.m4a" type="audio/m4a"></audio>
+<audio id="BTstory2" src="voice/BT/2.m4a" type="audio/m4a"></audio>
+<audio id="BTstory3" src="voice/BT/3.m4a" type="audio/m4a"></audio>
+<audio id="BTstory4" src="voice/BT/4.m4a" type="audio/m4a"></audio>
+<audio id="BTstory5" src="voice/BT/5.m4a" type="audio/m4a"></audio>
+<audio id="BTstory6" src="voice/BT/6.m4a" type="audio/m4a"></audio>
+<audio id="BTstory7" src="voice/BT/7.m4a" type="audio/m4a"></audio>
+<audio id="BTstory8" src="voice/BT/8.m4a" type="audio/m4a"></audio>
+<audio id="BTstory9" src="voice/BT/9.m4a" type="audio/m4a"></audio>
+<audio id="BTstory10" src="voice/BT/10.m4a" type="audio/m4a"></audio>
+<audio id="BTstory11" src="voice/BT/11.m4a" type="audio/m4a"></audio>
+<audio id="BTstory12" src="voice/BT/12.m4a" type="audio/m4a"></audio>
+<audio id="BTstory13" src="voice/BT/13.m4a" type="audio/m4a"></audio>
+<audio id="BTstory14" src="voice/BT/14.m4a" type="audio/m4a"></audio>
+
+<audio id="letsgo" src="GAMESSTORY/BT/LETSGO.mp3" type="audio/mp3"></audio>
+<audio id="BTConfirm" src="GAMESSTORY/BT/CONFIRM.mp3" type="audio/mp3"></audio>
+<audio id="Later" src="GAMESSTORY/BT/LATER.mp3" type="audio/mp3"></audio>
